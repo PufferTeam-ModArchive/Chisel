@@ -18,7 +18,7 @@ public class FullBrightMicroMaterial extends BlockMicroMaterial {
 
     @SideOnly(Side.CLIENT)
     public void renderMicroFace(final Vector3 pos, final int pass, final Cuboid6 bounds) {
-        CCRenderState.pipeline.builder()
+        CCRenderState.instance().pipeline.builder()
             .add((CCRenderState.IVertexOperation) pos.translation())
             .add((CCRenderState.IVertexOperation) this.icont())
             .add((CCRenderState.IVertexOperation) ColourMultiplier.instance(FULL_BRIGHT_COLOR_MULTIPLIER))

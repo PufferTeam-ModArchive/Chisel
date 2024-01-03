@@ -8,16 +8,19 @@ public class FullBrightLighting implements CCRenderState.IVertexOperation {
     public int id;
 
     public boolean load() {
-        if (!CCRenderState.computeLighting) {
+        final CCRenderState state = CCRenderState.instance();
+
+        if (!state.computeLighting) {
             return false;
         }
-        CCRenderState.pipeline.addDependency(CCRenderState.colourAttrib);
-        CCRenderState.pipeline.addDependency(CCRenderState.lightCoordAttrib);
+        state.pipeline.addDependency(CCRenderState.colourAttrib);
+        state.pipeline.addDependency(CCRenderState.lightCoordAttrib);
         return true;
     }
 
     public void operate() {
-        CCRenderState.setBrightness(FULL_BRIGHT_BLOCK_BRIGHTNESS);
+        CCRenderState.instance()
+            .setBrightness(FULL_BRIGHT_BLOCK_BRIGHTNESS);
     }
 
     public int operationID() {
