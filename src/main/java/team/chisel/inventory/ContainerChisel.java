@@ -96,6 +96,7 @@ public class ContainerChisel extends Container {
             itemstack = itemstack1.copy();
 
             if (slotIdx > InventoryChiselSelection.normalSlots) {
+                // clicked in player inventory
                 if (!this.mergeItemStack(
                     itemstack1,
                     InventoryChiselSelection.normalSlots,
@@ -104,10 +105,13 @@ public class ContainerChisel extends Container {
                     return null;
                 }
             } else {
-                entity.inventory.setItemStack(itemstack1.copy());
-                slot.onPickupFromSlot(entity, itemstack1);
-                itemstack1 = entity.inventory.getItemStack();
-                entity.inventory.setItemStack(null);
+                // only run this logic if a chisel selection slot was clicked (i.e. not the input slot)
+                if (slotIdx != InventoryChiselSelection.normalSlots) {
+                    entity.inventory.setItemStack(itemstack1.copy());
+                    slot.onPickupFromSlot(entity, itemstack1);
+                    itemstack1 = entity.inventory.getItemStack();
+                    entity.inventory.setItemStack(null);
+                }
 
                 if (!this.mergeItemStack(
                     itemstack1,
