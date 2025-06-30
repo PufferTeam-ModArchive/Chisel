@@ -1106,6 +1106,10 @@ tile.chisel.hellbark_planks.name=Hellbark Wood Planks
 tile.chisel.jacaranda_planks.name=Jacaranda Wood Planks
 tile.chisel.mahogany_planks.name=Mahogany Wood Planks
 
+#Thaumcraft Wood
+tile.chisel.greatwood_planks.name=Greatwood Wood Planks
+tile.chisel.silverwood_planks.name=Silverwood Wood Planks
+
 #Iron Fence
 tile.chisel.iron_bars.name=Iron Bars
 tile.iron_bars.1.desc=Iron Bars without Frame
@@ -1774,6 +1778,40 @@ tile.mahogany.planks.7.desc=Mahogany Wood Plank Blinds
 tile.mahogany.planks.12.desc=Mahogany Wood Scaffold
 tile.mahogany.planks.14.desc=Mahogany Wood Planks in Disarray
 tile.mahogany.planks.15.desc=Vertical Mahogany Wood Planks in Disarray
+
+#Greatwood
+tile.greatwood.planks.1.desc=Smooth Greatwood Wood Planks
+tile.greatwood.planks.2.desc=Short Greatwood Wood Planks
+tile.greatwood.planks.6.desc=Fancy Greatwood Wood Plank Arrangement
+tile.greatwood.planks.8.desc=Greatwood Wood Panel
+tile.greatwood.planks.9.desc=Greatwood Wood Double Slab
+tile.greatwood.planks.10.desc=Greatwood Wood Crate
+tile.greatwood.planks.11.desc=Fancy Greatwood Wood Crate
+tile.greatwood.planks.13.desc=Large Long Greatwood Wood Planks
+tile.greatwood.planks.3.desc=Vertical Greatwood Wood Planks
+tile.greatwood.planks.4.desc=Vertical Uneven Greatwood Wood Planks
+tile.greatwood.planks.5.desc=Greatwood Wood Parquet
+tile.greatwood.planks.7.desc=Greatwood Wood Plank Blinds
+tile.greatwood.planks.12.desc=Greatwood Wood Scaffold
+tile.greatwood.planks.14.desc=Greatwood Wood Planks in Disarray
+tile.greatwood.planks.15.desc=Vertical Greatwood Wood Planks in Disarray
+
+#Silverwood
+tile.silverwood.planks.1.desc=Smooth Silverwood Wood Planks
+tile.silverwood.planks.2.desc=Short Silverwood Wood Planks
+tile.silverwood.planks.6.desc=Fancy Silverwood Wood Plank Arrangement
+tile.silverwood.planks.8.desc=Silverwood Wood Panel
+tile.silverwood.planks.9.desc=Silverwood Wood Double Slab
+tile.silverwood.planks.10.desc=Silverwood Wood Crate
+tile.silverwood.planks.11.desc=Fancy Silverwood Wood Crate
+tile.silverwood.planks.13.desc=Large Long Silverwood Wood Planks
+tile.silverwood.planks.3.desc=Vertical Silverwood Wood Planks
+tile.silverwood.planks.4.desc=Vertical Uneven Silverwood Wood Planks
+tile.silverwood.planks.5.desc=Silverwood Wood Parquet
+tile.silverwood.planks.7.desc=Silverwood Wood Plank Blinds
+tile.silverwood.planks.12.desc=Silverwood Wood Scaffold
+tile.silverwood.planks.14.desc=Silverwood Wood Planks in Disarray
+tile.silverwood.planks.15.desc=Vertical Silverwood Wood Planks in Disarray
 
 #Stained Glass
 white.bubble.desc=White Bubble Glass
