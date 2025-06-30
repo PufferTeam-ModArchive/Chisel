@@ -4300,7 +4300,7 @@ public enum Features {
                     .addVariation("tile." + n + ".planks.15.desc", 15, "planks-" + n + "/chaotic");
                 planks_bop[i].carverHelper.registerAll(planks_bop[i], name);
                 int i2 = i;
-                if(i > 9) {
+                if (i > 9) {
                     i2 = i + 1;
                 }
                 Carving.chisel.addVariation(name, GameRegistry.findBlock("BiomesOPlenty", "planks"), i2, 0);
@@ -4342,17 +4342,16 @@ public enum Features {
                     .addVariation("tile." + n + ".planks.4.desc", 4, "planks-" + n + "/vertical-uneven");
                 planks_tc[i].carverHelper.addVariation("tile." + n + ".planks.5.desc", 5, "planks-" + n + "/parquet");
                 planks_tc[i].carverHelper.addVariation("tile." + n + ".planks.7.desc", 7, "planks-" + n + "/blinds");
-                planks_tc[i].carverHelper
-                    .addVariation("tile." + n + ".planks.12.desc", 12, "planks-" + n + "/crateex");
+                planks_tc[i].carverHelper.addVariation("tile." + n + ".planks.12.desc", 12, "planks-" + n + "/crateex");
                 planks_tc[i].carverHelper
                     .addVariation("tile." + n + ".planks.14.desc", 14, "planks-" + n + "/chaotic-hor");
-                planks_tc[i].carverHelper
-                    .addVariation("tile." + n + ".planks.15.desc", 15, "planks-" + n + "/chaotic");
+                planks_tc[i].carverHelper.addVariation("tile." + n + ".planks.15.desc", 15, "planks-" + n + "/chaotic");
                 planks_tc[i].carverHelper.registerAll(planks_tc[i], name);
-                if(GameRegistry.findBlock("salisarcana", "blockCustomPlank") != null) {
+                if (GameRegistry.findBlock("salisarcana", "blockCustomPlank") != null) {
                     Carving.chisel.addVariation(name, GameRegistry.findBlock("salisarcana", "blockCustomPlank"), i, 0);
                 } else {
-                    Carving.chisel.addVariation(name, GameRegistry.findBlock("Thaumcraft", "blockWoodenDevice"), i + 6, 0);
+                    Carving.chisel
+                        .addVariation(name, GameRegistry.findBlock("Thaumcraft", "blockWoodenDevice"), i + 6, 0);
                 }
                 planks_tc[i].setHarvestLevel("axe", 0);
                 Carving.chisel.registerOre(name, "wood");
