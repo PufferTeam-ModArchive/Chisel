@@ -4298,7 +4298,11 @@ public enum Features {
                 planks_bop[i].carverHelper
                     .addVariation("tile." + n + ".planks.15.desc", 15, "planks-" + n + "/chaotic");
                 planks_bop[i].carverHelper.registerAll(planks_bop[i], name);
-                Carving.chisel.addVariation(name, Blocks.planks, i, 0);
+                int i2 = i;
+                if(i > 9) {
+                    i2 = i + 1;
+                }
+                Carving.chisel.addVariation(name, GameRegistry.findBlock("BiomesOPlenty", "planks"), i2, 0);
                 planks_bop[i].setHarvestLevel("axe", 0);
                 Carving.chisel.registerOre(name, "wood");
                 Carving.chisel.setVariationSound(name, Chisel.MOD_ID + ":chisel.wood");
