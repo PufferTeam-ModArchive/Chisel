@@ -44,14 +44,22 @@ public class Configurations {
     public static boolean imTooGoodForDescriptions;
 
     public static boolean allowChiselDamage;
+    public static int bronzeChiselMaxDamage;
     public static int ironChiselMaxDamage;
+    public static int thaumiumChiselMaxDamage;
+    public static int manasteelChiselMaxDamage;
     public static int diamondChiselMaxDamage;
+    public static int steelChiselMaxDamage;
     public static int obsidianChiselMaxDamage;
     public static int netherStarChiselMaxDamage;
     public static boolean ironChiselCanLeftClick;
     public static boolean ironChiselHasModes;
+    public static int bronzeChiselAttackDamage;
     public static int ironChiselAttackDamage;
+    public static int thaumiumChiselAttackDamage;
+    public static int manasteelChiselAttackDamage;
     public static int diamondChiselAttackDamage;
+    public static int steelChiselAttackDamage;
     public static int obsidianChiselAttackDamage;
     public static int netherStarChiselAttackDamage;
     public static boolean allowChiselCrossColors;
@@ -179,20 +187,38 @@ public class Configurations {
                 true,
                 "Should the chisel be damageable and take damage when it chisels something.")
             .getBoolean();
+        bronzeChiselMaxDamage = config
+            .getInt("bronzeChiselMaxDamage", category, 200, 1, Short.MAX_VALUE, "The max damage of the bronze chisel.");
         ironChiselMaxDamage = config.getInt(
             "ironChiselMaxDamage",
             category,
-            500,
+            250,
             1,
             Short.MAX_VALUE,
             "The max damage of the standard iron chisel.");
+        thaumiumChiselMaxDamage = config.getInt(
+            "thaumiumChiselMaxDamage",
+            category,
+            400,
+            1,
+            Short.MAX_VALUE,
+            "The max damage of the thaumium chisel.");
+        manasteelChiselMaxDamage = config.getInt(
+            "manasteelChiselMaxDamage",
+            category,
+            330,
+            1,
+            Short.MAX_VALUE,
+            "The max damage of the manasteel chisel.");
         diamondChiselMaxDamage = config.getInt(
             "diamondChiselMaxDamage",
             category,
-            5000,
+            1561,
             1,
             Short.MAX_VALUE,
             "The max damage of the diamond chisel.");
+        steelChiselMaxDamage = config
+            .getInt("steelChiselMaxDamage", category, 1500, 1, Short.MAX_VALUE, "The max damage of the steel chisel.");
         obsidianChiselMaxDamage = config.getInt(
             "obsidianChiselMaxDamage",
             category,
@@ -229,17 +255,41 @@ public class Configurations {
                 "Should someone be able to chisel something into a different color.")
             .getBoolean();
 
+        bronzeChiselAttackDamage = config.get(
+            category,
+            "bronzeChiselAttackDamage",
+            1,
+            "The extra attack damage points (in half hearts) that the bronze chisel inflicts when it is used to attack an entity.")
+            .getInt();
         ironChiselAttackDamage = config.get(
             category,
             "ironChiselAttackDamage",
             2,
             "The extra attack damage points (in half hearts) that the iron chisel inflicts when it is used to attack an entity.")
             .getInt();
+        thaumiumChiselAttackDamage = config.get(
+            category,
+            "thaumiumChiselAttackDamage",
+            2,
+            "The extra attack damage points (in half hearts) that the thaumium chisel inflicts when it is used to attack an entity.")
+            .getInt();
+        manasteelChiselAttackDamage = config.get(
+            category,
+            "manasteelChiselAttackDamage",
+            2,
+            "The extra attack damage points (in half hearts) that the manasteel chisel inflicts when it is used to attack an entity.")
+            .getInt();
         diamondChiselAttackDamage = config.get(
             category,
             "diamondChiselAttackDamage",
             2,
             "The extra attack damage points (in half hearts) that the diamond chisel inflicts when it is used to attack an entity.")
+            .getInt();
+        steelChiselAttackDamage = config.get(
+            category,
+            "steelChiselAttackDamage",
+            2,
+            "The extra attack damage points (in half hearts) that the steel chisel inflicts when it is used to attack an entity.")
             .getInt();
         obsidianChiselAttackDamage = config.get(
             category,

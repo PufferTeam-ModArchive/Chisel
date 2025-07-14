@@ -25,13 +25,18 @@ import com.google.common.collect.Multimap;
 import team.chisel.Chisel;
 import team.chisel.carving.Carving;
 import team.chisel.config.Configurations;
+import team.chisel.utils.General;
 
 public class ItemChisel extends Item implements IChiselItem {
 
     public enum ChiselType {
 
+        BRONZE(Configurations.bronzeChiselMaxDamage, Configurations.bronzeChiselAttackDamage),
         IRON(Configurations.ironChiselMaxDamage, Configurations.ironChiselAttackDamage),
+        THAUMIUM(Configurations.thaumiumChiselMaxDamage, Configurations.thaumiumChiselAttackDamage),
+        MANASTEEL(Configurations.manasteelChiselMaxDamage, Configurations.manasteelChiselAttackDamage),
         DIAMOND(Configurations.diamondChiselMaxDamage, Configurations.diamondChiselAttackDamage),
+        STEEL(Configurations.steelChiselMaxDamage, Configurations.steelChiselAttackDamage),
         OBSIDIAN(Configurations.obsidianChiselMaxDamage, Configurations.obsidianChiselAttackDamage),
         NETHERSTAR(Configurations.netherStarChiselMaxDamage, Configurations.netherStarChiselAttackDamage);
 
@@ -85,12 +90,18 @@ public class ItemChisel extends Item implements IChiselItem {
     @Override
     public boolean getIsRepairable(ItemStack damagedItem, ItemStack repairMaterial) {
         switch (type) {
+            case BRONZE:
+                return General.containsOreDict(repairMaterial, "ingotBronze");
             case DIAMOND:
-                return repairMaterial.getItem()
-                    .equals(Items.diamond);
+                return General.containsOreDict(repairMaterial, "gemDiamond");
             case IRON:
-                return repairMaterial.getItem()
-                    .equals(Items.iron_ingot);
+                return General.containsOreDict(repairMaterial, "ingotIron");
+            case THAUMIUM:
+                return General.containsOreDict(repairMaterial, "ingotThaumium");
+            case MANASTEEL:
+                return General.containsOreDict(repairMaterial, "ingotManasteel");
+            case STEEL:
+                return General.containsOreDict(repairMaterial, "ingotSteel");
             case OBSIDIAN:
                 return repairMaterial.getItem()
                     .equals(Item.getItemFromBlock(Blocks.obsidian));
@@ -110,13 +121,15 @@ public class ItemChisel extends Item implements IChiselItem {
         String lc2 = I18n.format(base + "lc2");
         String modes = I18n.format(base + "modes");
         list.add(gui);
-        if (type == ChiselType.DIAMOND || type == ChiselType.OBSIDIAN
+        if (type == ChiselType.STEEL || type == ChiselType.DIAMOND
+            || type == ChiselType.OBSIDIAN
             || type == ChiselType.NETHERSTAR
             || Configurations.ironChiselCanLeftClick) {
             list.add(lc1);
             list.add(lc2);
         }
-        if (type == ChiselType.DIAMOND || type == ChiselType.OBSIDIAN
+        if (type == ChiselType.STEEL || type == ChiselType.DIAMOND
+            || type == ChiselType.OBSIDIAN
             || type == ChiselType.NETHERSTAR
             || Configurations.ironChiselHasModes) {
             list.add("");
@@ -162,14 +175,16 @@ public class ItemChisel extends Item implements IChiselItem {
 
     @Override
     public boolean canChiselBlock(World world, EntityPlayer player, int x, int y, int z, Block block, int metadata) {
-        return type == ChiselType.DIAMOND || type == ChiselType.OBSIDIAN
+        return type == ChiselType.STEEL || type == ChiselType.DIAMOND
+            || type == ChiselType.OBSIDIAN
             || type == ChiselType.NETHERSTAR
             || Configurations.ironChiselCanLeftClick;
     }
 
     @Override
     public boolean hasModes(ItemStack chisel) {
-        return type == ChiselType.DIAMOND || type == ChiselType.OBSIDIAN
+        return type == ChiselType.STEEL || type == ChiselType.DIAMOND
+            || type == ChiselType.OBSIDIAN
             || type == ChiselType.NETHERSTAR
             || Configurations.ironChiselHasModes;
     }

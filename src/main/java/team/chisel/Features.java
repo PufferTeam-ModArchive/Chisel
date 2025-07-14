@@ -614,16 +614,28 @@ public enum Features {
 
         @Override
         void addItems() {
+            ItemChisel bronzeChisel = (ItemChisel) new ItemChisel(ItemChisel.ChiselType.BRONZE)
+                .setCreativeTab(ChiselTabs.tabChisel);
             ItemChisel chisel = (ItemChisel) new ItemChisel(ItemChisel.ChiselType.IRON)
                 .setCreativeTab(ChiselTabs.tabChisel);
+            ItemChisel thaumiumChisel = (ItemChisel) new ItemChisel(ItemChisel.ChiselType.THAUMIUM)
+                .setCreativeTab(ChiselTabs.tabChisel);
+            ItemChisel manasteelChisel = (ItemChisel) new ItemChisel(ItemChisel.ChiselType.MANASTEEL)
+                .setCreativeTab(ChiselTabs.tabChisel);
             ItemChisel diamondChisel = (ItemChisel) new ItemChisel(ItemChisel.ChiselType.DIAMOND)
+                .setCreativeTab(ChiselTabs.tabChisel);
+            ItemChisel steelChisel = (ItemChisel) new ItemChisel(ItemChisel.ChiselType.STEEL)
                 .setCreativeTab(ChiselTabs.tabChisel);
             ItemChisel obsidianChisel = (ItemChisel) new ItemChisel(ItemChisel.ChiselType.OBSIDIAN)
                 .setCreativeTab(ChiselTabs.tabChisel);
             ItemChisel netherStarChisel = (ItemChisel) new ItemChisel(ItemChisel.ChiselType.NETHERSTAR)
                 .setCreativeTab(ChiselTabs.tabChisel);
+            GameRegistry.registerItem(bronzeChisel, "bronzeChisel");
             GameRegistry.registerItem(chisel, "chisel");
+            GameRegistry.registerItem(thaumiumChisel, "thaumiumChisel");
+            GameRegistry.registerItem(manasteelChisel, "manasteelChisel");
             GameRegistry.registerItem(diamondChisel, "diamondChisel");
+            GameRegistry.registerItem(steelChisel, "steelChisel");
             GameRegistry.registerItem(obsidianChisel, "obsidianChisel");
             GameRegistry.registerItem(netherStarChisel, "netherStarChisel");
         }

@@ -13,6 +13,7 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.util.Vec3;
 import net.minecraft.world.World;
+import net.minecraftforge.oredict.OreDictionary;
 
 import com.cricketcraft.chisel.api.IAdvancedChisel;
 import com.cricketcraft.chisel.api.carving.CarvingUtils;
@@ -164,5 +165,15 @@ public class General {
         return v == null
             ? CarvingUtils.getDefaultVariationFor(Block.getBlockFromItem(stack.getItem()), stack.getItemDamage(), 99)
             : v;
+    }
+
+    public static boolean containsOreDict(ItemStack b, String oreDict) {
+        boolean isValid = false;
+        for (int id1 : OreDictionary.getOreIDs(b)) {
+            if (id1 == OreDictionary.getOreID(oreDict)) {
+                isValid = true;
+            }
+        }
+        return isValid;
     }
 }
