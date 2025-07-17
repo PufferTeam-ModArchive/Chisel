@@ -10,10 +10,8 @@ import team.chisel.block.BlockCarvableCarpet;
 import team.chisel.block.BlockCarvableGlass;
 import team.chisel.block.BlockCarvableGlowstone;
 import team.chisel.block.BlockCarvableIce;
-import team.chisel.block.BlockCarvableIceStairs;
 import team.chisel.block.BlockCarvableLayered;
 import team.chisel.block.BlockCarvablePackedIce;
-import team.chisel.block.BlockCarvablePackedIceStairs;
 import team.chisel.block.BlockCarvablePane;
 import team.chisel.block.BlockCarvablePowered;
 import team.chisel.block.BlockCarvablePumpkin;
@@ -140,12 +138,6 @@ public final class ChiselBlocks {
     public static final BlockCarvable hempcrete = null;
     public static final BlockCarvable sveltstone = null;
     public static final BlockCarvable cubit = null;
-
-    // Arrays can't be final because of how @ObjectHolder works
-    public static BlockCarvableStairs[] marbleStairs = new BlockCarvableStairs[8];
-    public static BlockCarvableStairs[] limestoneStairs = new BlockCarvableStairs[8];
-    public static BlockCarvableIceStairs[] iceStairs = new BlockCarvableIceStairs[8];
-    public static BlockCarvablePackedIceStairs[] packediceStairs = new BlockCarvablePackedIceStairs[8];
 
     public static Block[] torches = new BlockCarvableTorch[16];
 
