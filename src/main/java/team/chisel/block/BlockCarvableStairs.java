@@ -40,7 +40,10 @@ public class BlockCarvableStairs extends BlockStairs implements ICarvable {
 
     @Override
     public int damageDropped(int i) {
-        return i / 8;
+        if (i < 8) {
+            return 0;
+        }
+        return 8;
     }
 
     @Override

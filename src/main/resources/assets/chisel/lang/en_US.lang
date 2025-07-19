@@ -98,33 +98,69 @@ tile.antiBlock.gray.desc=Gray Anti Block
 
 #Diorite
 tile.chisel.diorite.name=Diorite
-tile.diorite.0.desc=Generates in your world
+tile.chisel.diorite_slab.name=Diorite Slab
+tile.chisel.diorite_double_slab.name=Diorite Slab
+tile.chisel.diorite_stairs.name=Diorite Stairs
+tile.diorite.0.desc=Raw
 tile.diorite.1.desc=Polished Diorite
 tile.diorite.2.desc=Diorite Pillar
 tile.diorite.3.desc=Diorite Bricks
 tile.diorite.4.desc=Ornate Diorite
 tile.diorite.5.desc=Prismatic Diorite
 tile.diorite.6.desc=Diorite Small Tiles
+tile.diorite.7.desc=Diorite Weathered Bricks
+tile.diorite.8.desc=Diorite Wide Bricks
+tile.diorite.9.desc=Medium Chaotic Diorite
+tile.diorite.10.desc=Small Chaotic Diorite
+tile.diorite.11.desc=Diorite Braid
+tile.diorite.12.desc=Diorite Mosaic
+tile.diorite.13.desc=Weaver Diorite
+tile.diorite.14.desc=Diorite Large Tiles
+tile.diorite.15.desc=Large Chaotic Diorite
 
 #Andesite
 tile.chisel.andesite.name=Andesite
-tile.andesite.0.desc=Generates in your world
+tile.chisel.andesite_slab.name=Andesite Slab
+tile.chisel.andesite_double_slab.name=Andesite Slab
+tile.chisel.andesite_stairs.name=Andesite Stairs
+tile.andesite.0.desc=Raw
 tile.andesite.1.desc=Polished Andesite
 tile.andesite.2.desc=Andesite Pillar
 tile.andesite.3.desc=Andesite Bricks
 tile.andesite.4.desc=Ornate Andesite
 tile.andesite.5.desc=Prismatic Andesite
 tile.andesite.6.desc=Andesite Small Tiles
+tile.andesite.7.desc=Andesite Weathered Bricks
+tile.andesite.8.desc=Andesite Wide Bricks
+tile.andesite.9.desc=Medium Chaotic Andesite
+tile.andesite.10.desc=Small Chaotic Andesite
+tile.andesite.11.desc=Andesite Braid
+tile.andesite.12.desc=Andesite Mosaic
+tile.andesite.13.desc=Weaver Andesite
+tile.andesite.14.desc=Andesite Large Tiles
+tile.andesite.15.desc=Large Chaotic Andesite
 
 #Granite
 tile.chisel.granite.name=Granite
-tile.granite.0.desc=Generates in your world
+tile.chisel.granite_slab.name=Granite Slab
+tile.chisel.granite_double_slab.name=Granite Slab
+tile.chisel.granite_stairs.name=Granite Stairs
+tile.granite.0.desc=Raw
 tile.granite.1.desc=Polished Granite
 tile.granite.2.desc=Granite Pillar
 tile.granite.3.desc=Granite Bricks
 tile.granite.4.desc=Ornate Granite
 tile.granite.5.desc=Prismatic Granite
 tile.granite.6.desc=Granite Small Tiles
+tile.granite.7.desc=Granite Weathered Bricks
+tile.granite.8.desc=Granite Wide Bricks
+tile.granite.9.desc=Medium Chaotic Granite
+tile.granite.10.desc=Small Chaotic Granite
+tile.granite.11.desc=Granite Braid
+tile.granite.12.desc=Granite Mosaic
+tile.granite.13.desc=Weaver Granite
+tile.granite.14.desc=Granite Large Tiles
+tile.granite.15.desc=Large Chaotic Granite
 
 #Auto Chisel
 tile.chisel.autoChisel.name=Auto Chisel
@@ -447,6 +483,9 @@ tile.brickCustom.6.desc=Yellow Bricks
 
 #Cobblestone Blocks
 tile.chisel.cobblestone.name=Cobblestone
+tile.chisel.cobblestone_double_slab.name=Cobblestone Slab
+tile.chisel.cobblestone_slab.name=Cobblestone Slab
+tile.chisel.cobblestone_stairs.name=Cobblestone Stairs
 tile.cobblestone.0.desc=Aligned Cobblestone Bricks
 tile.cobblestone.1.desc=Detailed Cobblestone Bricks
 tile.cobblestone.2.desc=Small Cobblestone Bricks
@@ -465,6 +504,8 @@ tile.cobblestone.14.desc=Cobblestone with Dark Panel
 
 #Marble Blocks
 tile.chisel.marble.name=Marble
+tile.chisel.marble_stairs.name=Marble Stairs
+tile.chisel.marble_slab.name=Marble Slab
 tile.marble.0.desc=Raw Marble
 tile.marble.1.desc=Marble Brick
 tile.marble.2.desc=Classic Marble Panel
@@ -481,25 +522,6 @@ tile.marble.12.desc=Marble Tiles
 tile.marble.13.desc=Arranged Marble Tiles
 tile.marble.14.desc=Fancy Marble Tiles
 tile.marble.15.desc=Marble Blocks
-
-#Marble Slabs
-tile.chisel.marble_slab.name=Marble Slab
-tile.marbleSlab.0.desc=Raw Marble Slab
-tile.marbleSlab.1.desc=Marble Brick Slab
-tile.marbleSlab.2.desc=Classic Marble Panel Slab
-tile.marbleSlab.3.desc=Ornate Marble Panel Slab
-tile.marbleSlab.4.desc=Marble Panel Slab
-tile.marbleSlab.5.desc=Marble Block Slab
-tile.marbleSlab.6.desc=Dark Creeper Marble Slab
-tile.marbleSlab.7.desc=Light Creeper Marble Slab
-tile.marbleSlab.8.desc=Carved Marble Slab
-tile.marbleSlab.9.desc=Radial Carved Marble Slab
-tile.marbleSlab.10.desc=Marble Slab with Dent
-tile.marbleSlab.11.desc=Marble Slab with Large Dent
-tile.marbleSlab.12.desc=Marble Tiled Slab
-tile.marbleSlab.13.desc=Arranged Marble Tiled Slab
-tile.marbleSlab.14.desc=Fancy Marble Tiled Slab
-tile.marbleSlab.15.desc=Marble Blocks Slab
 
 #Marble Pillars (old)
 tile.chisel.marble_pillar.name=Marble Pillar
@@ -538,75 +560,10 @@ tile.marblePillar.13.desc=Wide Marble Pillar with Plain Capstone
 tile.marblePillar.14.desc=Carved Pillar Capstone
 tile.marblePillar.15.desc=Ornamental Pillar Capstone
 
-#Marble Slabs (old)
-tile.chisel.marble_pillar_slab.name=Marble Pillar Slab
-tile.marblePillarSlabOld.0.desc=Marble Pillar Slab
-tile.marblePillarSlabOld.1.desc=Marble Pillar Capstone Slab
-tile.marblePillarSlabOld.2.desc=Marble Pillar Base Slab
-tile.marblePillarSlabOld.3.desc=Small Marble Pillar Slab
-tile.marblePillarSlabOld.4.desc=Carved Marble Pillar Slab
-tile.marblePillarSlabOld.5.desc=Ornamental Marble Pillar Slab
-tile.marblePillarSlabOld.6.desc=Greek Marble Pillar Slab
-tile.marblePillarSlabOld.7.desc=Plain Marble Pillar Slab
-tile.marblePillarSlabOld.8.desc=Greek Marble Pillar Capstone Slab
-tile.marblePillarSlabOld.9.desc=Plain Marble Pillar capstone Slab
-tile.marblePillarSlabOld.10.desc=Greek Marble Pillar Base Slab
-tile.marblePillarSlabOld.11.desc=Plain Marble Pillar Base Slab
-tile.marblePillarSlabOld.12.desc=Greek Marble Pillar Ornate Capstone Slab
-tile.marblePillarSlabOld.13.desc=Plain Marble Pillar Ornate Capstone Slab
-tile.marblePillarSlabOld.14.desc=Greek Marble Pillar Ornate Base Slab
-tile.marblePillarSlabOld.15.desc=Plain Marble Pillar Ornate Base Slab
-
-#Marble Slabs (current)
-tile.marblePillarSlab.0.desc=Marble Pillar Slab
-tile.marblePillarSlab.1.desc=Original Marble Pillar Slab
-tile.marblePillarSlab.2.desc=Simplistic Marble Pillar Slab
-tile.marblePillarSlab.3.desc=Convex Marble Pillar Slab
-tile.marblePillarSlab.4.desc=Rough Marble Pillar Slab
-tile.marblePillarSlab.5.desc=Greek Marble Pillar Slab with Ornate Capstone
-tile.marblePillarSlab.6.desc=Greek Marble Pillar Slab
-tile.marblePillarSlab.7.desc=Greek Marble Pillar Slab with Plain Capstone
-tile.marblePillarSlab.8.desc=Plain Marble Pillar Slab with Ornate Capstone
-tile.marblePillarSlab.9.desc=Plain Marble Pillar Slab with Greek Capstone
-tile.marblePillarSlab.10.desc=Plain Marble Pillar Slab
-tile.marblePillarSlab.11.desc=Wide Marble Pillar Slab with Ornate Capstone
-tile.marblePillarSlab.12.desc=Wide Marble Pillar Slab with Greek Capstone
-tile.marblePillarSlab.13.desc=Wide Marble Pillar Slab with Plain Capstone
-tile.marblePillarSlab.14.desc=Carved Pillar Capstone Slab
-tile.marblePillarSlab.15.desc=Ornamental Pillar Capstone Slab
-
-#Marble Stairs
-#The same name goes here 8 different times since stairs take up 8 block positions.
-#Sorry!  It was the only way!
-tile.chisel.marble_stairs.0.name=Marble Stairs
-tile.chisel.marble_stairs.1.name=Marble Stairs
-tile.chisel.marble_stairs.2.name=Marble Stairs
-tile.chisel.marble_stairs.3.name=Marble Stairs
-tile.chisel.marble_stairs.4.name=Marble Stairs
-tile.chisel.marble_stairs.5.name=Marble Stairs
-tile.chisel.marble_stairs.6.name=Marble Stairs
-tile.chisel.marble_stairs.7.name=Marble Stairs
-
-#These are bugged.... so sad :,(
-tile.marbleStairs.0.desc=Raw Marble Stairs
-tile.marbleStairs.1.desc=Marble Brick Stairs
-tile.marbleStairs.2.desc=Classic Marble Panel Stairs
-tile.marbleStairs.3.desc=Ornate Marble Panel Stairs
-tile.marbleStairs.4.desc=Marble Panel Stairs
-tile.marbleStairs.5.desc=Marble Block Stairs
-tile.marbleStairs.6.desc=Dark Creeper Marble Stairs
-tile.marbleStairs.7.desc=Light Creeper Marble Stairs
-tile.marbleStairs.8.desc=Carved Marble Stairs
-tile.marbleStairs.9.desc=Radial Carved Marble Stairs
-tile.marbleStairs.10.desc=Marble Stairs with Dent
-tile.marbleStairs.11.desc=Marble Stairs with Large Dent
-tile.marbleStairs.12.desc=Marble Tiled Stairs
-tile.marbleStairs.13.desc=Arranged Marble Tiled Stairs
-tile.marbleStairs.14.desc=Fancy Marble Tiled Stairs
-tile.marbleStairs.15.desc=Marble Block Stairs
-
 #Limestone
 tile.chisel.limestone.name=Limestone
+tile.chisel.limestone_stairs.name=Limestone Stairs
+tile.chisel.limestone_slab.name=Limestone Slab
 tile.limestone.0.desc=Limestone
 tile.limestone.1.desc=Small Limestone Tiles
 tile.limestone.2.desc=French Limestone Tiles
@@ -623,55 +580,6 @@ tile.limestone.12.desc=Limestone with Panel
 tile.limestone.13.desc=Large Limestone Tiles
 tile.limestone.14.desc=Limestone with Light Panel
 tile.limestone.15.desc=Limestone with Dark Panel
-
-#Limestone Slabs
-tile.chisel.limestone_slab.name=Limestone Slab
-tile.limestoneSlab.0.desc=Limestone Slab
-tile.limestoneSlab.1.desc=Small Limestone Tiled Slab
-tile.limestoneSlab.2.desc=French Limestone Tiled Slab
-tile.limestoneSlab.3.desc=French Limestone Tiled Slab
-tile.limestoneSlab.4.desc=Creeper Limestone Tiled Slab
-tile.limestoneSlab.5.desc=Small Limestone Bricks Slab
-tile.limestoneSlab.6.desc=Damaged Limestone Tiled Slab
-tile.limestoneSlab.7.desc=Smooth Limestone Slab
-tile.limestoneSlab.8.desc=Limestone Slab with Ornate Panel
-tile.limestoneSlab.9.desc=Limestone Slab with Ornate Panel
-tile.limestoneSlab.10.desc=Limestone Slab with Creeper Panel
-tile.limestoneSlab.11.desc=Limestone Slab with Dent
-tile.limestoneSlab.12.desc=Limestone Slab with Panel
-tile.limestoneSlab.13.desc=Large Limestone Tiles Slab
-tile.limestoneSlab.14.desc=Limestone Slab with Light Panel
-tile.limestoneSlab.15.desc=Limestone Slab with Dark Panel
-
-#Limestone Stairs
-#The same name goes here 8 different times since stairs take up 8 block positions.
-#Sorry!  It was the only way!
-tile.chisel.limestone_stairs.0.name=Limestone Stairs
-tile.chisel.limestone_stairs.1.name=Limestone Stairs
-tile.chisel.limestone_stairs.2.name=Limestone Stairs
-tile.chisel.limestone_stairs.3.name=Limestone Stairs
-tile.chisel.limestone_stairs.4.name=Limestone Stairs
-tile.chisel.limestone_stairs.5.name=Limestone Stairs
-tile.chisel.limestone_stairs.6.name=Limestone Stairs
-tile.chisel.limestone_stairs.7.name=Limestone Stairs
-
-#These are bugged.... so sad :,(
-tile.limestoneStairs.0.desc=Limestone Stairs
-tile.limestoneStairs.1.desc=Small Limestone Tiled Stairs
-tile.limestoneStairs.2.desc=French Limestone Tiled Stairs
-tile.limestoneStairs.3.desc=French Limestone Tiled Stairs
-tile.limestoneStairs.4.desc=Creeper Limestone Tiled Stairs
-tile.limestoneStairs.5.desc=Small Limestone Bricks Stairs
-tile.limestoneStairs.6.desc=Damaged Limestone Tiled Stairs
-tile.limestoneStairs.7.desc=Smooth Limestone Stairs
-tile.limestoneStairs.8.desc=Limestone Stairs with Ornate Panel
-tile.limestoneStairs.9.desc=Limestone Stairs with Ornate Panel
-tile.limestoneStairs.10.desc=Limestone Stairs with Creeper Panel
-tile.limestoneStairs.11.desc=Limestone Stairs with Dent
-tile.limestoneStairs.12.desc=Limestone Stairs with Panel
-tile.limestoneStairs.13.desc=Large Limestone Tiled Stairs
-tile.limestoneStairs.14.desc=Limestone Stairs with Light Panel
-tile.limestoneStairs.15.desc=Limestone Stairs with Dark Panel
 
 #Factory Blocks
 tile.chisel.factoryblock.name=Factory Block
@@ -1087,32 +995,76 @@ tile.obsidian.14.desc=Light Obsidian Blocks with Greek Decor
 tile.obsidian.15.desc=Small Obsidian Blocks inside an Oak Wood Crate
 
 #Wood
-tile.chisel.oak_planks.name=Oak Wood Planks
-tile.chisel.birch_planks.name=Birch Wood Planks
-tile.chisel.spruce_planks.name=Spruce Wood Planks
-tile.chisel.jungle_planks.name=Jungle Wood Planks
-tile.chisel.dark_oak_planks.name=Dark Oak Wood Planks
-tile.chisel.acacia_planks.name=Acacia Wood Planks
+tile.chisel.oak_planks.name=Oak Planks
+tile.chisel.oak_planks_slab.name=Oak Slab
+tile.chisel.oak_planks_stairs.name=Oak Stairs
+tile.chisel.birch_planks.name=Birch Planks
+tile.chisel.birch_planks_slab.name=Birch Slab
+tile.chisel.birch_planks_stairs.name=Birch Stairs
+tile.chisel.spruce_planks.name=Spruce Planks
+tile.chisel.spruce_planks_slab.name=Spruce Slab
+tile.chisel.spruce_planks_stairs.name=Spruce Stairs
+tile.chisel.jungle_planks.name=Jungle Planks
+tile.chisel.jungle_planks_slab.name=Jungle Slab
+tile.chisel.jungle_planks_stairs.name=Jungle Stairs
+tile.chisel.dark_oak_planks.name=Dark Oak Planks
+tile.chisel.dark_oak_planks_slab.name=Dark Oak Slab
+tile.chisel.dark_oak_planks_stairs.name=Dark Oak Stairs
+tile.chisel.acacia_planks.name=Acacia Planks
+tile.chisel.acacia_planks_slab.name=Acacia Slab
+tile.chisel.acacia_planks_stairs.name=Acacia Stairs
 
 #BOP Wood
-tile.chisel.sacredoak_planks.name=Sacred Oak Wood Planks
-tile.chisel.cherry_planks.name=Cherry Wood Planks
-tile.chisel.dark_planks.name=Dark Wood Planks
-tile.chisel.fir_planks.name=Fir Wood Planks
-tile.chisel.ethereal_planks.name=Ethereal Wood Planks
-tile.chisel.magic_planks.name=Magic Wood Planks
-tile.chisel.mangrove_planks.name=Mangrove Wood Planks
-tile.chisel.palm_planks.name=Palm Wood Planks
-tile.chisel.redwood_planks.name=Redwood Wood Planks
-tile.chisel.willow_planks.name=Willow Wood Planks
-tile.chisel.pine_planks.name=Pine Wood Planks
-tile.chisel.hellbark_planks.name=Hellbark Wood Planks
-tile.chisel.jacaranda_planks.name=Jacaranda Wood Planks
-tile.chisel.mahogany_planks.name=Mahogany Wood Planks
+tile.chisel.sacredoak_planks.name=Sacred Oak Planks
+tile.chisel.sacredoak_planks_slab.name=Sacred Oak Slab
+tile.chisel.sacredoak_planks_stairs.name=Sacred Oak Stairs
+tile.chisel.cherry_planks.name=Cherry Planks
+tile.chisel.cherry_planks_slab.name=Cherry Slab
+tile.chisel.cherry_planks_stairs.name=Cherry Stairs
+tile.chisel.dark_planks.name=Dark Planks
+tile.chisel.dark_planks_slab.name=Dark Slab
+tile.chisel.dark_planks_stairs.name=Dark Stairs
+tile.chisel.fir_planks.name=Fir Planks
+tile.chisel.fir_planks_slab.name=Fir Slab
+tile.chisel.fir_planks_stairs.name=Fir Stairs
+tile.chisel.ethereal_planks.name=Ethereal Planks
+tile.chisel.ethereal_planks_slab.name=Ethereal Slab
+tile.chisel.ethereal_planks_stairs.name=Ethereal Stairs
+tile.chisel.magic_planks.name=Magic Planks
+tile.chisel.magic_planks_slab.name=Magic Slab
+tile.chisel.magic_planks_stairs.name=Magic Stairs
+tile.chisel.mangrove_planks.name=Mangrove Planks
+tile.chisel.mangrove_planks_slab.name=Mangrove Slab
+tile.chisel.mangrove_planks_stairs.name=Mangrove Stairs
+tile.chisel.palm_planks.name=Palm Planks
+tile.chisel.palm_planks_slab.name=Palm Slab
+tile.chisel.palm_planks_stairs.name=Palm Stairs
+tile.chisel.redwood_planks.name=Redwood Planks
+tile.chisel.redwood_planks_slab.name=Redwood Slab
+tile.chisel.redwood_planks_stairs.name=Redwood Stairs
+tile.chisel.willow_planks.name=Willow Planks
+tile.chisel.willow_planks_slab.name=Willow Slab
+tile.chisel.willow_planks_stairs.name=Willow Stairs
+tile.chisel.pine_planks.name=Pine Planks
+tile.chisel.pine_planks_slab.name=Pine Slab
+tile.chisel.pine_planks_stairs.name=Pine Stairs
+tile.chisel.hellbark_planks.name=Hellbark Planks
+tile.chisel.hellbark_planks_slab.name=Hellbark Slab
+tile.chisel.hellbark_planks_stairs.name=Hellbark Stairs
+tile.chisel.jacaranda_planks.name=Jacaranda Planks
+tile.chisel.jacaranda_planks_slab.name=Jacaranda Slab
+tile.chisel.jacaranda_planks_stairs.name=Jacaranda Stairs
+tile.chisel.mahogany_planks.name=Mahogany Planks
+tile.chisel.mahogany_planks_slab.name=Mahogany Slab
+tile.chisel.mahogany_planks_stairs.name=Mahogany Stairs
 
 #Thaumcraft Wood
-tile.chisel.greatwood_planks.name=Greatwood Wood Planks
-tile.chisel.silverwood_planks.name=Silverwood Wood Planks
+tile.chisel.greatwood_planks.name=Greatwood Planks
+tile.chisel.greatwood_planks_slab.name=Greatwood Slab
+tile.chisel.greatwood_planks_stairs.name=Greatwood Stairs
+tile.chisel.silverwood_planks.name=Silverwood Planks
+tile.chisel.silverwood_planks_slab.name=Silverwood Slab
+tile.chisel.silverwood_planks_stairs.name=Silverwood Stairs
 
 #Iron Fence
 tile.chisel.iron_bars.name=Iron Bars
@@ -1500,8 +1452,8 @@ tile.jungle.planks.2.desc=Short Jungle Wood Planks
 tile.jungle.planks.6.desc=Fancy Jungle Wood Plank Arrangement
 tile.jungle.planks.8.desc=Jungle Wood Panel
 tile.jungle.planks.9.desc=Jungle Wood Double Slab
-tile.jungle.planks.10.desc=Oak Wood Crate
-tile.jungle.planks.11.desc=Fancy jungle Wood Crate
+tile.jungle.planks.10.desc=Jungle Wood Crate
+tile.jungle.planks.11.desc=Fancy Jungle Wood Crate
 tile.jungle.planks.13.desc=Large Long Jungle Wood Planks
 tile.jungle.planks.3.desc=Vertical Jungle Wood Planks
 tile.jungle.planks.4.desc=Vertical Uneven Jungle Wood Planks

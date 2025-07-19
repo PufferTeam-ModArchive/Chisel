@@ -22,28 +22,46 @@ public class CarvableStairsMaker {
     }
 
     public void create(String name, Block[] blocks) {
-        create(null, name, blocks);
+        create(null, name, blocks, false);
+    }
+
+    public void create(String name, Block[] blocks, boolean isWood) {
+        create(null, name, blocks, isWood);
     }
 
     public void create(IStairsCreator creator, String name, Block[] blocks) {
+        create(creator, name, blocks, false);
+    }
+
+    public void create(IStairsCreator creator, String name, Block[] blocks, boolean isWood) {
         for (int i = 0; i < blocks.length; i++) {
             String n = name + "." + i;
             blocks[i] = creator == null ? new BlockCarvableStairs(blockBase, i * 2, carverHelper)
                 : creator.create(blockBase, i * 2, carverHelper);
 
-            blocks[i].setBlockName("chisel." + n)
+            blocks[i].setBlockName("chisel." + name)
                 .setCreativeTab(ChiselTabs.tabStairChiselBlocks);
+            if(isWood) {
+                blocks[i].setHarvestLevel("axe", 0);
+            }
             GameRegistry.registerBlock(blocks[i], ItemCarvable.class, n);
 
-            for (int meta = 0; meta < 2 && i * 2 + meta < carverHelper.infoList.size(); meta++) {
-                Carving.chisel.addVariation(name, CarvingUtils.getDefaultVariationFor(blocks[i], meta * 8, i));
-                GameRegistry.addRecipe(
-                    new ItemStack(blocks[i], 4, meta * 8),
-                    "*  ",
-                    "** ",
-                    "***",
-                    '*',
-                    new ItemStack(blockBase, 1, i * 2 + meta));
+            int k = 0;
+            if(carverHelper.getVariation(0) == null) {
+                k = 1;
+            }
+            for (int meta = 0; meta < 2 && i * 2 + meta < carverHelper.infoList.size() + k; meta++) {
+                if(carverHelper.getVariation(0) != null || (carverHelper.getVariation(0) == null && (i != 0 || meta != 0))) {
+                    Carving.chisel.addVariation(name, CarvingUtils.getDefaultVariationFor(blocks[i], meta * 8, i));
+                    GameRegistry.addRecipe(
+                        new ItemStack(blocks[i], 4, meta * 8),
+                        "*  ",
+                        "** ",
+                        "***",
+                        '*',
+                        new ItemStack(blockBase, 1, i * 2 + meta));
+                }
+
             }
         }
     }

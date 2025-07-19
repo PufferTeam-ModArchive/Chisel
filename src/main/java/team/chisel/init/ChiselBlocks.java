@@ -4,32 +4,7 @@ import net.minecraft.block.Block;
 
 import cpw.mods.fml.common.registry.GameRegistry.ObjectHolder;
 import team.chisel.Chisel;
-import team.chisel.block.BlockCarvable;
-import team.chisel.block.BlockCarvableBeacon;
-import team.chisel.block.BlockCarvableCarpet;
-import team.chisel.block.BlockCarvableGlass;
-import team.chisel.block.BlockCarvableGlowstone;
-import team.chisel.block.BlockCarvableIce;
-import team.chisel.block.BlockCarvableLayered;
-import team.chisel.block.BlockCarvablePackedIce;
-import team.chisel.block.BlockCarvablePane;
-import team.chisel.block.BlockCarvablePowered;
-import team.chisel.block.BlockCarvablePumpkin;
-import team.chisel.block.BlockCarvableSand;
-import team.chisel.block.BlockCarvableSlab;
-import team.chisel.block.BlockCarvableStairs;
-import team.chisel.block.BlockCarvableTorch;
-import team.chisel.block.BlockCarvableWall;
-import team.chisel.block.BlockCloud;
-import team.chisel.block.BlockConcrete;
-import team.chisel.block.BlockGrimstone;
-import team.chisel.block.BlockHolystone;
-import team.chisel.block.BlockLavastone;
-import team.chisel.block.BlockPresent;
-import team.chisel.block.BlockRoadLine;
-import team.chisel.block.BlockSnakestone;
-import team.chisel.block.BlockSnakestoneObsidian;
-import team.chisel.block.BlockWaterstone;
+import team.chisel.block.*;
 
 @ObjectHolder(Chisel.MOD_ID)
 public final class ChiselBlocks {
@@ -139,11 +114,37 @@ public final class ChiselBlocks {
     public static final BlockCarvable sveltstone = null;
     public static final BlockCarvable cubit = null;
 
+    public static CarvableStairsMaker[] planks_stairs = new CarvableStairsMaker[6];
+    public static CarvableStairsMaker[] planks_bop_stairs = new CarvableStairsMaker[14];
+    public static CarvableStairsMaker[] planks_tc_stairs = new CarvableStairsMaker[2];
+
+    // Arrays can't be final because of how @ObjectHolder works
+    public static BlockCarvableStairs[] planksStairs = new BlockCarvableStairs[8];
+    public static BlockCarvableStairs[] planksBOPStairs = new BlockCarvableStairs[8];
+    public static BlockCarvableStairs[] planksTCStairs = new BlockCarvableStairs[8];
+
+    public static BlockCarvableStairs[] cobblestoneStairs = new BlockCarvableStairs[8];
+    public static BlockCarvableStairs[] andesiteStairs = new BlockCarvableStairs[8];
+    public static BlockCarvableStairs[] graniteStairs = new BlockCarvableStairs[8];
+    public static BlockCarvableStairs[] dioriteStairs = new BlockCarvableStairs[8];
+    public static BlockCarvableStairs[] marbleStairs = new BlockCarvableStairs[8];
+    public static BlockCarvableStairs[] limestoneStairs = new BlockCarvableStairs[8];
+    public static BlockCarvableIceStairs[] iceStairs = new BlockCarvableIceStairs[8];
+    public static BlockCarvablePackedIceStairs[] packediceStairs = new BlockCarvablePackedIceStairs[8];
+
     public static Block[] torches = new BlockCarvableTorch[16];
 
     public static BlockCarvable[] planks = new BlockCarvable[6];
+    public static BlockCarvableSlab[] planks_slabs = new BlockCarvableSlab[6];
+    public static BlockCarvableDoubleSlab[] planks_double_slabs = new BlockCarvableDoubleSlab[6];
+
     public static BlockCarvable[] planks_bop = new BlockCarvable[14];
+    public static BlockCarvableSlab[] planks_bop_slabs = new BlockCarvableSlab[14];
+    public static BlockCarvableDoubleSlab[] planks_bop_double_slabs = new BlockCarvableDoubleSlab[14];
+
     public static BlockCarvable[] planks_tc = new BlockCarvable[2];
+    public static BlockCarvableSlab[] planks_tc_slabs = new BlockCarvableSlab[2];
+    public static BlockCarvableDoubleSlab[] planks_tc_double_slabs = new BlockCarvableDoubleSlab[2];
 
     public static BlockCarvablePumpkin[] pumpkin = new BlockCarvablePumpkin[16];
     public static BlockCarvablePumpkin[] jackolantern = new BlockCarvablePumpkin[16];

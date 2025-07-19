@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Random;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.Item;
@@ -28,7 +29,7 @@ public class BlockCarvableSlab extends BlockCarvable {
     public boolean isBottom;
 
     public BlockCarvableSlab(BlockCarvable marble) {
-        opaque = true;
+        this.useNeighborBrightness = true;
 
         setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 0.5F, 1.0F);
 
@@ -39,8 +40,32 @@ public class BlockCarvableSlab extends BlockCarvable {
         isBottom = true;
     }
 
+    public BlockCarvableSlab(Material mat, BlockCarvable marble) {
+        super(mat);
+        this.useNeighborBrightness = true;
+
+        setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 0.5F, 1.0F);
+
+        master = marble;
+        bottom = this;
+        top = new BlockCarvableSlab(mat, this);
+
+        isBottom = true;
+    }
+
     public BlockCarvableSlab(BlockCarvableSlab bottomBlock) {
         super();
+        setBlockBounds(0.0F, 0.5F, 0.0F, 1.0F, 1.0F, 1.0F);
+        master = bottomBlock.master;
+        bottom = bottomBlock;
+        top = this;
+
+        carverHelper = bottomBlock.carverHelper;
+        isBottom = false;
+    }
+
+    public BlockCarvableSlab(Material mat, BlockCarvableSlab bottomBlock) {
+        super(mat);
         setBlockBounds(0.0F, 0.5F, 0.0F, 1.0F, 1.0F, 1.0F);
         master = bottomBlock.master;
         bottom = bottomBlock;

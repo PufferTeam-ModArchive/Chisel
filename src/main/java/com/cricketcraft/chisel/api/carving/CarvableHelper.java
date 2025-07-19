@@ -174,8 +174,18 @@ public class CarvableHelper {
         GameRegistry.registerBlock(block, cl, name);
     }
 
+    void registerBlock(Block block, String name, Class<? extends ItemBlock> cl, Object... itemCtorArgs) {
+        block.setBlockName("chisel." + name);
+        GameRegistry.registerBlock(block, cl, name, itemCtorArgs);
+    }
+
     public void registerAll(Block block, String name, Class<? extends ItemBlock> cl) {
         registerBlock(block, name, cl);
+        registerVariations(name);
+    }
+
+    public void registerAll(Block block, String name, Class<? extends ItemBlock> cl, Object... itemCtorArgs) {
+        registerBlock(block, name, cl, itemCtorArgs);
         registerVariations(name);
     }
 
