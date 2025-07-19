@@ -41,17 +41,18 @@ public class CarvableStairsMaker {
 
             blocks[i].setBlockName("chisel." + name)
                 .setCreativeTab(ChiselTabs.tabStairChiselBlocks);
-            if(isWood) {
+            if (isWood) {
                 blocks[i].setHarvestLevel("axe", 0);
             }
             GameRegistry.registerBlock(blocks[i], ItemCarvable.class, n);
 
             int k = 0;
-            if(carverHelper.getVariation(0) == null) {
+            if (carverHelper.getVariation(0) == null) {
                 k = 1;
             }
             for (int meta = 0; meta < 2 && i * 2 + meta < carverHelper.infoList.size() + k; meta++) {
-                if(carverHelper.getVariation(0) != null || (carverHelper.getVariation(0) == null && (i != 0 || meta != 0))) {
+                if (carverHelper.getVariation(0) != null
+                    || (carverHelper.getVariation(0) == null && (i != 0 || meta != 0))) {
                     Carving.chisel.addVariation(name, CarvingUtils.getDefaultVariationFor(blocks[i], meta * 8, i));
                     GameRegistry.addRecipe(
                         new ItemStack(blocks[i], 4, meta * 8),

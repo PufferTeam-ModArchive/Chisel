@@ -8,16 +8,16 @@ import static team.chisel.init.ChiselBlocks.jackolantern;
 import static team.chisel.init.ChiselBlocks.neonite;
 import static team.chisel.init.ChiselBlocks.nucrete;
 import static team.chisel.init.ChiselBlocks.planks;
-import static team.chisel.init.ChiselBlocks.planks_slabs;
-import static team.chisel.init.ChiselBlocks.planks_double_slabs;
-import static team.chisel.init.ChiselBlocks.planks_stairs;
-import static team.chisel.init.ChiselBlocks.planks_bop_slabs;
-import static team.chisel.init.ChiselBlocks.planks_bop_double_slabs;
-import static team.chisel.init.ChiselBlocks.planks_bop_stairs;
 import static team.chisel.init.ChiselBlocks.planks_bop;
+import static team.chisel.init.ChiselBlocks.planks_bop_double_slabs;
+import static team.chisel.init.ChiselBlocks.planks_bop_slabs;
+import static team.chisel.init.ChiselBlocks.planks_bop_stairs;
+import static team.chisel.init.ChiselBlocks.planks_double_slabs;
+import static team.chisel.init.ChiselBlocks.planks_slabs;
+import static team.chisel.init.ChiselBlocks.planks_stairs;
 import static team.chisel.init.ChiselBlocks.planks_tc;
-import static team.chisel.init.ChiselBlocks.planks_tc_slabs;
 import static team.chisel.init.ChiselBlocks.planks_tc_double_slabs;
+import static team.chisel.init.ChiselBlocks.planks_tc_slabs;
 import static team.chisel.init.ChiselBlocks.planks_tc_stairs;
 import static team.chisel.init.ChiselBlocks.pumpkin;
 import static team.chisel.init.ChiselBlocks.stainedGlass;
@@ -1199,7 +1199,8 @@ public enum Features {
             diorite_double_slab.carverHelper.addVariation("tile.diorite.15.desc", 15, "diorite/chaotic");
             diorite_double_slab.carverHelper.registerBlock(diorite_double_slab, "diorite_double_slab");
 
-            diorite_slab.carverHelper.registerAll(diorite_slab, "diorite_slab", ItemCarvableSlab.class, diorite_double_slab);
+            diorite_slab.carverHelper
+                .registerAll(diorite_slab, "diorite_slab", ItemCarvableSlab.class, diorite_double_slab);
             registerSlabTop(diorite_slab, diorite_slab.top);
             Carving.chisel.registerOre("diorite_slab", "diorite_slab");
 
@@ -2538,10 +2539,8 @@ public enum Features {
             limestone_slab.carverHelper.addVariation("tile.limestone.0.desc", 0, "limestone");
             limestone_slab.carverHelper
                 .addVariation("tile.limestone.1.desc", 1, "limestone/terrain-cobbsmalltilelight");
-            limestone_slab.carverHelper
-                .addVariation("tile.limestone.2.desc", 2, "limestone/terrain-cob-frenchlight");
-            limestone_slab.carverHelper
-                .addVariation("tile.limestone.3.desc", 3, "limestone/terrain-cob-french2light");
+            limestone_slab.carverHelper.addVariation("tile.limestone.2.desc", 2, "limestone/terrain-cob-frenchlight");
+            limestone_slab.carverHelper.addVariation("tile.limestone.3.desc", 3, "limestone/terrain-cob-french2light");
             limestone_slab.carverHelper
                 .addVariation("tile.limestone.4.desc", 4, "limestone/terrain-cobmoss-creepdungeonlight");
             limestone_slab.carverHelper
@@ -2570,8 +2569,8 @@ public enum Features {
             BlockCarvableDoubleSlab limestone_double_slab = (BlockCarvableDoubleSlab) new BlockCarvableDoubleSlab(
                 Material.rock,
                 limestone_slab).setHardness(2.0F)
-                .setResistance(10.0F)
-                .setCreativeTab(null);
+                    .setResistance(10.0F)
+                    .setCreativeTab(null);
             limestone_double_slab.carverHelper.addVariation("tile.limestoneSlab.0.desc", 0, "limestone");
             limestone_double_slab.carverHelper
                 .addVariation("tile.limestone.1.desc", 1, "limestone/terrain-cobbsmalltilelight");
@@ -2716,23 +2715,27 @@ public enum Features {
             BlockCarvableDoubleSlab marble_double_slab = (BlockCarvableDoubleSlab) new BlockCarvableDoubleSlab(
                 Material.rock,
                 marble_slab).setHardness(2.0F)
-                .setResistance(10.0F)
-                .setCreativeTab(null);
+                    .setResistance(10.0F)
+                    .setCreativeTab(null);
             marble_double_slab.carverHelper.addVariation("tile.marble.0.desc", 0, "marble");
-            marble_double_slab.carverHelper.addVariation("tile.marble.1.desc", 1, "marble/a1-stoneornamental-marblebrick");
+            marble_double_slab.carverHelper
+                .addVariation("tile.marble.1.desc", 1, "marble/a1-stoneornamental-marblebrick");
             marble_double_slab.carverHelper
                 .addVariation("tile.marble.2.desc", 2, "marble/a1-stoneornamental-marbleclassicpanel");
-            marble_double_slab.carverHelper.addVariation("tile.marble.3.desc", 3, "marble/a1-stoneornamental-marbleornate");
+            marble_double_slab.carverHelper
+                .addVariation("tile.marble.3.desc", 3, "marble/a1-stoneornamental-marbleornate");
             marble_double_slab.carverHelper.addVariation("tile.marble.4.desc", 4, "marble/panel");
             marble_double_slab.carverHelper.addVariation("tile.marble.5.desc", 5, "marble/block");
             marble_double_slab.carverHelper
                 .addVariation("tile.marble.6.desc", 6, "marble/terrain-pistonback-marblecreeperdark");
             marble_double_slab.carverHelper
                 .addVariation("tile.marble.7.desc", 7, "marble/terrain-pistonback-marblecreeperlight");
-            marble_double_slab.carverHelper.addVariation("tile.marble.8.desc", 8, "marble/a1-stoneornamental-marblecarved");
+            marble_double_slab.carverHelper
+                .addVariation("tile.marble.8.desc", 8, "marble/a1-stoneornamental-marblecarved");
             marble_double_slab.carverHelper
                 .addVariation("tile.marble.9.desc", 9, "marble/a1-stoneornamental-marblecarvedradial");
-            marble_double_slab.carverHelper.addVariation("tile.marble.10.desc", 10, "marble/terrain-pistonback-marbledent");
+            marble_double_slab.carverHelper
+                .addVariation("tile.marble.10.desc", 10, "marble/terrain-pistonback-marbledent");
             marble_double_slab.carverHelper
                 .addVariation("tile.marble.11.desc", 11, "marble/terrain-pistonback-marbledent-small");
             marble_double_slab.carverHelper.addVariation("tile.marble.12.desc", 12, "marble/marble-bricks");
@@ -2741,7 +2744,8 @@ public enum Features {
             marble_double_slab.carverHelper.addVariation("tile.marble.15.desc", 15, "marble/marble-blocks");
             marble_double_slab.carverHelper.registerBlock(marble_double_slab, "marble_double_slab");
 
-            marble_slab.carverHelper.registerAll(marble_slab, "marble_slab", ItemCarvableSlab.class, marble_double_slab);
+            marble_slab.carverHelper
+                .registerAll(marble_slab, "marble_slab", ItemCarvableSlab.class, marble_double_slab);
             registerSlabTop(marble_slab, marble_slab.top);
             Carving.chisel.registerOre("marble_slab", "marble_slab");
 
@@ -4534,47 +4538,66 @@ public enum Features {
                 planks_slabs[i].carverHelper.addVariation("tile." + n + ".planks.1.desc", 1, "planks-" + n + "/clean");
                 planks_slabs[i].carverHelper.addVariation("tile." + n + ".planks.2.desc", 2, "planks-" + n + "/short");
                 planks_slabs[i].carverHelper.addVariation("tile." + n + ".planks.6.desc", 6, "planks-" + n + "/fancy");
-                planks_slabs[i].carverHelper.addVariation("tile." + n + ".planks.8.desc", 8, "planks-" + n + "/panel-nails");
+                planks_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.8.desc", 8, "planks-" + n + "/panel-nails");
                 planks_slabs[i].carverHelper.addVariation("tile." + n + ".planks.9.desc", 9, "planks-" + n + "/double");
-                planks_slabs[i].carverHelper.addVariation("tile." + n + ".planks.10.desc", 10, "planks-" + n + "/crate");
+                planks_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.10.desc", 10, "planks-" + n + "/crate");
                 planks_slabs[i].carverHelper
                     .addVariation("tile." + n + ".planks.11.desc", 11, "planks-" + n + "/crate-fancy");
-                planks_slabs[i].carverHelper.addVariation("tile." + n + ".planks.13.desc", 13, "planks-" + n + "/large");
-                planks_slabs[i].carverHelper.addVariation("tile." + n + ".planks.3.desc", 3, "planks-" + n + "/vertical");
+                planks_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.13.desc", 13, "planks-" + n + "/large");
+                planks_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.3.desc", 3, "planks-" + n + "/vertical");
                 planks_slabs[i].carverHelper
                     .addVariation("tile." + n + ".planks.4.desc", 4, "planks-" + n + "/vertical-uneven");
-                planks_slabs[i].carverHelper.addVariation("tile." + n + ".planks.5.desc", 5, "planks-" + n + "/parquet");
+                planks_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.5.desc", 5, "planks-" + n + "/parquet");
                 planks_slabs[i].carverHelper.addVariation("tile." + n + ".planks.7.desc", 7, "planks-" + n + "/blinds");
-                planks_slabs[i].carverHelper.addVariation("tile." + n + ".planks.12.desc", 12, "planks-" + n + "/crateex");
+                planks_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.12.desc", 12, "planks-" + n + "/crateex");
                 planks_slabs[i].carverHelper
                     .addVariation("tile." + n + ".planks.14.desc", 14, "planks-" + n + "/chaotic-hor");
-                planks_slabs[i].carverHelper.addVariation("tile." + n + ".planks.15.desc", 15, "planks-" + n + "/chaotic");
+                planks_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.15.desc", 15, "planks-" + n + "/chaotic");
 
                 planks_double_slabs[i] = (BlockCarvableDoubleSlab) new BlockCarvableDoubleSlab(
                     Material.wood,
                     planks_slabs[i]).setHardness(2.0F)
-                    .setResistance(10.0F)
-                    .setCreativeTab(null);
+                        .setResistance(10.0F)
+                        .setCreativeTab(null);
                 planks_double_slabs[i].setHarvestLevel("axe", 0);
                 planks_double_slabs[i].setStepSound(Block.soundTypeWood);
-                planks_double_slabs[i].carverHelper.addVariation("tile." + n + ".planks.1.desc", 1, "planks-" + n + "/clean");
-                planks_double_slabs[i].carverHelper.addVariation("tile." + n + ".planks.2.desc", 2, "planks-" + n + "/short");
-                planks_double_slabs[i].carverHelper.addVariation("tile." + n + ".planks.6.desc", 6, "planks-" + n + "/fancy");
-                planks_double_slabs[i].carverHelper.addVariation("tile." + n + ".planks.8.desc", 8, "planks-" + n + "/panel-nails");
-                planks_double_slabs[i].carverHelper.addVariation("tile." + n + ".planks.9.desc", 9, "planks-" + n + "/double");
-                planks_double_slabs[i].carverHelper.addVariation("tile." + n + ".planks.10.desc", 10, "planks-" + n + "/crate");
+                planks_double_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.1.desc", 1, "planks-" + n + "/clean");
+                planks_double_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.2.desc", 2, "planks-" + n + "/short");
+                planks_double_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.6.desc", 6, "planks-" + n + "/fancy");
+                planks_double_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.8.desc", 8, "planks-" + n + "/panel-nails");
+                planks_double_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.9.desc", 9, "planks-" + n + "/double");
+                planks_double_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.10.desc", 10, "planks-" + n + "/crate");
                 planks_double_slabs[i].carverHelper
                     .addVariation("tile." + n + ".planks.11.desc", 11, "planks-" + n + "/crate-fancy");
-                planks_double_slabs[i].carverHelper.addVariation("tile." + n + ".planks.13.desc", 13, "planks-" + n + "/large");
-                planks_double_slabs[i].carverHelper.addVariation("tile." + n + ".planks.3.desc", 3, "planks-" + n + "/vertical");
+                planks_double_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.13.desc", 13, "planks-" + n + "/large");
+                planks_double_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.3.desc", 3, "planks-" + n + "/vertical");
                 planks_double_slabs[i].carverHelper
                     .addVariation("tile." + n + ".planks.4.desc", 4, "planks-" + n + "/vertical-uneven");
-                planks_double_slabs[i].carverHelper.addVariation("tile." + n + ".planks.5.desc", 5, "planks-" + n + "/parquet");
-                planks_double_slabs[i].carverHelper.addVariation("tile." + n + ".planks.7.desc", 7, "planks-" + n + "/blinds");
-                planks_double_slabs[i].carverHelper.addVariation("tile." + n + ".planks.12.desc", 12, "planks-" + n + "/crateex");
+                planks_double_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.5.desc", 5, "planks-" + n + "/parquet");
+                planks_double_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.7.desc", 7, "planks-" + n + "/blinds");
+                planks_double_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.12.desc", 12, "planks-" + n + "/crateex");
                 planks_double_slabs[i].carverHelper
                     .addVariation("tile." + n + ".planks.14.desc", 14, "planks-" + n + "/chaotic-hor");
-                planks_double_slabs[i].carverHelper.addVariation("tile." + n + ".planks.15.desc", 15, "planks-" + n + "/chaotic");
+                planks_double_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.15.desc", 15, "planks-" + n + "/chaotic");
                 planks_double_slabs[i].carverHelper.registerBlock(planks_double_slabs[i], name + "_double_slab");
                 planks_double_slabs[i].setBlockName("chisel." + name + "_slab");
 
@@ -4587,21 +4610,30 @@ public enum Features {
                 planks_stairs[i].carverHelper.addVariation("tile." + n + ".planks.1.desc", 1, "planks-" + n + "/clean");
                 planks_stairs[i].carverHelper.addVariation("tile." + n + ".planks.2.desc", 2, "planks-" + n + "/short");
                 planks_stairs[i].carverHelper.addVariation("tile." + n + ".planks.6.desc", 6, "planks-" + n + "/fancy");
-                planks_stairs[i].carverHelper.addVariation("tile." + n + ".planks.8.desc", 8, "planks-" + n + "/panel-nails");
-                planks_stairs[i].carverHelper.addVariation("tile." + n + ".planks.9.desc", 9, "planks-" + n + "/double");
-                planks_stairs[i].carverHelper.addVariation("tile." + n + ".planks.10.desc", 10, "planks-" + n + "/crate");
+                planks_stairs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.8.desc", 8, "planks-" + n + "/panel-nails");
+                planks_stairs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.9.desc", 9, "planks-" + n + "/double");
+                planks_stairs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.10.desc", 10, "planks-" + n + "/crate");
                 planks_stairs[i].carverHelper
                     .addVariation("tile." + n + ".planks.11.desc", 11, "planks-" + n + "/crate-fancy");
-                planks_stairs[i].carverHelper.addVariation("tile." + n + ".planks.13.desc", 13, "planks-" + n + "/large");
-                planks_stairs[i].carverHelper.addVariation("tile." + n + ".planks.3.desc", 3, "planks-" + n + "/vertical");
+                planks_stairs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.13.desc", 13, "planks-" + n + "/large");
+                planks_stairs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.3.desc", 3, "planks-" + n + "/vertical");
                 planks_stairs[i].carverHelper
                     .addVariation("tile." + n + ".planks.4.desc", 4, "planks-" + n + "/vertical-uneven");
-                planks_stairs[i].carverHelper.addVariation("tile." + n + ".planks.5.desc", 5, "planks-" + n + "/parquet");
-                planks_stairs[i].carverHelper.addVariation("tile." + n + ".planks.7.desc", 7, "planks-" + n + "/blinds");
-                planks_stairs[i].carverHelper.addVariation("tile." + n + ".planks.12.desc", 12, "planks-" + n + "/crateex");
+                planks_stairs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.5.desc", 5, "planks-" + n + "/parquet");
+                planks_stairs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.7.desc", 7, "planks-" + n + "/blinds");
+                planks_stairs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.12.desc", 12, "planks-" + n + "/crateex");
                 planks_stairs[i].carverHelper
                     .addVariation("tile." + n + ".planks.14.desc", 14, "planks-" + n + "/chaotic-hor");
-                planks_stairs[i].carverHelper.addVariation("tile." + n + ".planks.15.desc", 15, "planks-" + n + "/chaotic");
+                planks_stairs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.15.desc", 15, "planks-" + n + "/chaotic");
 
                 planks_stairs[i].create(name + "_stairs", ChiselBlocks.planksStairs, true);
 
@@ -4657,81 +4689,122 @@ public enum Features {
                 Carving.chisel.setVariationSound(name, Chisel.MOD_ID + ":chisel.wood");
                 Blocks.fire.setFireInfo(planks_bop[i], 5, 20);
 
-                planks_bop_slabs[i] = (BlockCarvableSlab) new BlockCarvableSlab(Material.wood, planks_bop[i]).setHardness(2.0F)
+                planks_bop_slabs[i] = (BlockCarvableSlab) new BlockCarvableSlab(Material.wood, planks_bop[i])
+                    .setHardness(2.0F)
                     .setResistance(5.0F)
                     .setStepSound(Block.soundTypeWood);
                 planks_bop_slabs[i].setHarvestLevel("axe", 0);
-                planks_bop_slabs[i].carverHelper.addVariation("tile." + n + ".planks.1.desc", 1, "planks-" + n + "/clean");
-                planks_bop_slabs[i].carverHelper.addVariation("tile." + n + ".planks.2.desc", 2, "planks-" + n + "/short");
-                planks_bop_slabs[i].carverHelper.addVariation("tile." + n + ".planks.6.desc", 6, "planks-" + n + "/fancy");
-                planks_bop_slabs[i].carverHelper.addVariation("tile." + n + ".planks.8.desc", 8, "planks-" + n + "/panel-nails");
-                planks_bop_slabs[i].carverHelper.addVariation("tile." + n + ".planks.9.desc", 9, "planks-" + n + "/double");
-                planks_bop_slabs[i].carverHelper.addVariation("tile." + n + ".planks.10.desc", 10, "planks-" + n + "/crate");
+                planks_bop_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.1.desc", 1, "planks-" + n + "/clean");
+                planks_bop_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.2.desc", 2, "planks-" + n + "/short");
+                planks_bop_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.6.desc", 6, "planks-" + n + "/fancy");
+                planks_bop_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.8.desc", 8, "planks-" + n + "/panel-nails");
+                planks_bop_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.9.desc", 9, "planks-" + n + "/double");
+                planks_bop_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.10.desc", 10, "planks-" + n + "/crate");
                 planks_bop_slabs[i].carverHelper
                     .addVariation("tile." + n + ".planks.11.desc", 11, "planks-" + n + "/crate-fancy");
-                planks_bop_slabs[i].carverHelper.addVariation("tile." + n + ".planks.13.desc", 13, "planks-" + n + "/large");
-                planks_bop_slabs[i].carverHelper.addVariation("tile." + n + ".planks.3.desc", 3, "planks-" + n + "/vertical");
+                planks_bop_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.13.desc", 13, "planks-" + n + "/large");
+                planks_bop_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.3.desc", 3, "planks-" + n + "/vertical");
                 planks_bop_slabs[i].carverHelper
                     .addVariation("tile." + n + ".planks.4.desc", 4, "planks-" + n + "/vertical-uneven");
-                planks_bop_slabs[i].carverHelper.addVariation("tile." + n + ".planks.5.desc", 5, "planks-" + n + "/parquet");
-                planks_bop_slabs[i].carverHelper.addVariation("tile." + n + ".planks.7.desc", 7, "planks-" + n + "/blinds");
-                planks_bop_slabs[i].carverHelper.addVariation("tile." + n + ".planks.12.desc", 12, "planks-" + n + "/crateex");
+                planks_bop_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.5.desc", 5, "planks-" + n + "/parquet");
+                planks_bop_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.7.desc", 7, "planks-" + n + "/blinds");
+                planks_bop_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.12.desc", 12, "planks-" + n + "/crateex");
                 planks_bop_slabs[i].carverHelper
                     .addVariation("tile." + n + ".planks.14.desc", 14, "planks-" + n + "/chaotic-hor");
-                planks_bop_slabs[i].carverHelper.addVariation("tile." + n + ".planks.15.desc", 15, "planks-" + n + "/chaotic");
+                planks_bop_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.15.desc", 15, "planks-" + n + "/chaotic");
 
                 planks_bop_double_slabs[i] = (BlockCarvableDoubleSlab) new BlockCarvableDoubleSlab(
                     Material.wood,
                     planks_bop_slabs[i]).setHardness(2.0F)
-                    .setResistance(10.0F)
-                    .setCreativeTab(null);
+                        .setResistance(10.0F)
+                        .setCreativeTab(null);
                 planks_bop_double_slabs[i].setHarvestLevel("axe", 0);
                 planks_bop_double_slabs[i].setStepSound(Block.soundTypeWood);
-                planks_bop_double_slabs[i].carverHelper.addVariation("tile." + n + ".planks.1.desc", 1, "planks-" + n + "/clean");
-                planks_bop_double_slabs[i].carverHelper.addVariation("tile." + n + ".planks.2.desc", 2, "planks-" + n + "/short");
-                planks_bop_double_slabs[i].carverHelper.addVariation("tile." + n + ".planks.6.desc", 6, "planks-" + n + "/fancy");
-                planks_bop_double_slabs[i].carverHelper.addVariation("tile." + n + ".planks.8.desc", 8, "planks-" + n + "/panel-nails");
-                planks_bop_double_slabs[i].carverHelper.addVariation("tile." + n + ".planks.9.desc", 9, "planks-" + n + "/double");
-                planks_bop_double_slabs[i].carverHelper.addVariation("tile." + n + ".planks.10.desc", 10, "planks-" + n + "/crate");
+                planks_bop_double_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.1.desc", 1, "planks-" + n + "/clean");
+                planks_bop_double_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.2.desc", 2, "planks-" + n + "/short");
+                planks_bop_double_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.6.desc", 6, "planks-" + n + "/fancy");
+                planks_bop_double_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.8.desc", 8, "planks-" + n + "/panel-nails");
+                planks_bop_double_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.9.desc", 9, "planks-" + n + "/double");
+                planks_bop_double_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.10.desc", 10, "planks-" + n + "/crate");
                 planks_bop_double_slabs[i].carverHelper
                     .addVariation("tile." + n + ".planks.11.desc", 11, "planks-" + n + "/crate-fancy");
-                planks_bop_double_slabs[i].carverHelper.addVariation("tile." + n + ".planks.13.desc", 13, "planks-" + n + "/large");
-                planks_bop_double_slabs[i].carverHelper.addVariation("tile." + n + ".planks.3.desc", 3, "planks-" + n + "/vertical");
+                planks_bop_double_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.13.desc", 13, "planks-" + n + "/large");
+                planks_bop_double_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.3.desc", 3, "planks-" + n + "/vertical");
                 planks_bop_double_slabs[i].carverHelper
                     .addVariation("tile." + n + ".planks.4.desc", 4, "planks-" + n + "/vertical-uneven");
-                planks_bop_double_slabs[i].carverHelper.addVariation("tile." + n + ".planks.5.desc", 5, "planks-" + n + "/parquet");
-                planks_bop_double_slabs[i].carverHelper.addVariation("tile." + n + ".planks.7.desc", 7, "planks-" + n + "/blinds");
-                planks_bop_double_slabs[i].carverHelper.addVariation("tile." + n + ".planks.12.desc", 12, "planks-" + n + "/crateex");
+                planks_bop_double_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.5.desc", 5, "planks-" + n + "/parquet");
+                planks_bop_double_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.7.desc", 7, "planks-" + n + "/blinds");
+                planks_bop_double_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.12.desc", 12, "planks-" + n + "/crateex");
                 planks_bop_double_slabs[i].carverHelper
                     .addVariation("tile." + n + ".planks.14.desc", 14, "planks-" + n + "/chaotic-hor");
-                planks_bop_double_slabs[i].carverHelper.addVariation("tile." + n + ".planks.15.desc", 15, "planks-" + n + "/chaotic");
-                planks_bop_double_slabs[i].carverHelper.registerBlock(planks_bop_double_slabs[i], name + "_double_slab");
+                planks_bop_double_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.15.desc", 15, "planks-" + n + "/chaotic");
+                planks_bop_double_slabs[i].carverHelper
+                    .registerBlock(planks_bop_double_slabs[i], name + "_double_slab");
                 planks_bop_double_slabs[i].setBlockName("chisel." + name + "_slab");
 
-                planks_bop_slabs[i].carverHelper
-                    .registerAll(planks_bop_slabs[i], name + "_slab", ItemCarvableSlab.class, planks_bop_double_slabs[i]);
+                planks_bop_slabs[i].carverHelper.registerAll(
+                    planks_bop_slabs[i],
+                    name + "_slab",
+                    ItemCarvableSlab.class,
+                    planks_bop_double_slabs[i]);
                 registerSlabTop(planks_bop_slabs[i], planks_bop_slabs[i].top, true);
                 Carving.chisel.setVariationSound(name + "_slab", Chisel.MOD_ID + ":chisel.wood");
 
                 planks_bop_stairs[i] = new CarvableStairsMaker(planks_bop[i]);
-                planks_bop_stairs[i].carverHelper.addVariation("tile." + n + ".planks.1.desc", 1, "planks-" + n + "/clean");
-                planks_bop_stairs[i].carverHelper.addVariation("tile." + n + ".planks.2.desc", 2, "planks-" + n + "/short");
-                planks_bop_stairs[i].carverHelper.addVariation("tile." + n + ".planks.6.desc", 6, "planks-" + n + "/fancy");
-                planks_bop_stairs[i].carverHelper.addVariation("tile." + n + ".planks.8.desc", 8, "planks-" + n + "/panel-nails");
-                planks_bop_stairs[i].carverHelper.addVariation("tile." + n + ".planks.9.desc", 9, "planks-" + n + "/double");
-                planks_bop_stairs[i].carverHelper.addVariation("tile." + n + ".planks.10.desc", 10, "planks-" + n + "/crate");
+                planks_bop_stairs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.1.desc", 1, "planks-" + n + "/clean");
+                planks_bop_stairs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.2.desc", 2, "planks-" + n + "/short");
+                planks_bop_stairs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.6.desc", 6, "planks-" + n + "/fancy");
+                planks_bop_stairs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.8.desc", 8, "planks-" + n + "/panel-nails");
+                planks_bop_stairs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.9.desc", 9, "planks-" + n + "/double");
+                planks_bop_stairs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.10.desc", 10, "planks-" + n + "/crate");
                 planks_bop_stairs[i].carverHelper
                     .addVariation("tile." + n + ".planks.11.desc", 11, "planks-" + n + "/crate-fancy");
-                planks_bop_stairs[i].carverHelper.addVariation("tile." + n + ".planks.13.desc", 13, "planks-" + n + "/large");
-                planks_bop_stairs[i].carverHelper.addVariation("tile." + n + ".planks.3.desc", 3, "planks-" + n + "/vertical");
+                planks_bop_stairs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.13.desc", 13, "planks-" + n + "/large");
+                planks_bop_stairs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.3.desc", 3, "planks-" + n + "/vertical");
                 planks_bop_stairs[i].carverHelper
                     .addVariation("tile." + n + ".planks.4.desc", 4, "planks-" + n + "/vertical-uneven");
-                planks_bop_stairs[i].carverHelper.addVariation("tile." + n + ".planks.5.desc", 5, "planks-" + n + "/parquet");
-                planks_bop_stairs[i].carverHelper.addVariation("tile." + n + ".planks.7.desc", 7, "planks-" + n + "/blinds");
-                planks_bop_stairs[i].carverHelper.addVariation("tile." + n + ".planks.12.desc", 12, "planks-" + n + "/crateex");
+                planks_bop_stairs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.5.desc", 5, "planks-" + n + "/parquet");
+                planks_bop_stairs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.7.desc", 7, "planks-" + n + "/blinds");
+                planks_bop_stairs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.12.desc", 12, "planks-" + n + "/crateex");
                 planks_bop_stairs[i].carverHelper
                     .addVariation("tile." + n + ".planks.14.desc", 14, "planks-" + n + "/chaotic-hor");
-                planks_bop_stairs[i].carverHelper.addVariation("tile." + n + ".planks.15.desc", 15, "planks-" + n + "/chaotic");
+                planks_bop_stairs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.15.desc", 15, "planks-" + n + "/chaotic");
 
                 planks_bop_stairs[i].create(name + "_stairs", ChiselBlocks.planksBOPStairs, true);
             }
@@ -4783,55 +4856,80 @@ public enum Features {
                 Carving.chisel.registerOre(name, "wood");
                 Carving.chisel.setVariationSound(name, Chisel.MOD_ID + ":chisel.wood");
                 Blocks.fire.setFireInfo(planks_tc[i], 5, 20);
-                
-                planks_tc_slabs[i] = (BlockCarvableSlab) new BlockCarvableSlab(Material.wood, planks_tc[i]).setHardness(2.0F)
+
+                planks_tc_slabs[i] = (BlockCarvableSlab) new BlockCarvableSlab(Material.wood, planks_tc[i])
+                    .setHardness(2.0F)
                     .setResistance(5.0F)
                     .setStepSound(Block.soundTypeWood);
                 planks_tc_slabs[i].setHarvestLevel("axe", 0);
-                planks_tc_slabs[i].carverHelper.addVariation("tile." + n + ".planks.1.desc", 1, "planks-" + n + "/clean");
-                planks_tc_slabs[i].carverHelper.addVariation("tile." + n + ".planks.2.desc", 2, "planks-" + n + "/short");
-                planks_tc_slabs[i].carverHelper.addVariation("tile." + n + ".planks.6.desc", 6, "planks-" + n + "/fancy");
-                planks_tc_slabs[i].carverHelper.addVariation("tile." + n + ".planks.8.desc", 8, "planks-" + n + "/panel-nails");
-                planks_tc_slabs[i].carverHelper.addVariation("tile." + n + ".planks.9.desc", 9, "planks-" + n + "/double");
-                planks_tc_slabs[i].carverHelper.addVariation("tile." + n + ".planks.10.desc", 10, "planks-" + n + "/crate");
+                planks_tc_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.1.desc", 1, "planks-" + n + "/clean");
+                planks_tc_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.2.desc", 2, "planks-" + n + "/short");
+                planks_tc_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.6.desc", 6, "planks-" + n + "/fancy");
+                planks_tc_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.8.desc", 8, "planks-" + n + "/panel-nails");
+                planks_tc_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.9.desc", 9, "planks-" + n + "/double");
+                planks_tc_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.10.desc", 10, "planks-" + n + "/crate");
                 planks_tc_slabs[i].carverHelper
                     .addVariation("tile." + n + ".planks.11.desc", 11, "planks-" + n + "/crate-fancy");
-                planks_tc_slabs[i].carverHelper.addVariation("tile." + n + ".planks.13.desc", 13, "planks-" + n + "/large");
-                planks_tc_slabs[i].carverHelper.addVariation("tile." + n + ".planks.3.desc", 3, "planks-" + n + "/vertical");
+                planks_tc_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.13.desc", 13, "planks-" + n + "/large");
+                planks_tc_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.3.desc", 3, "planks-" + n + "/vertical");
                 planks_tc_slabs[i].carverHelper
                     .addVariation("tile." + n + ".planks.4.desc", 4, "planks-" + n + "/vertical-uneven");
-                planks_tc_slabs[i].carverHelper.addVariation("tile." + n + ".planks.5.desc", 5, "planks-" + n + "/parquet");
-                planks_tc_slabs[i].carverHelper.addVariation("tile." + n + ".planks.7.desc", 7, "planks-" + n + "/blinds");
-                planks_tc_slabs[i].carverHelper.addVariation("tile." + n + ".planks.12.desc", 12, "planks-" + n + "/crateex");
+                planks_tc_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.5.desc", 5, "planks-" + n + "/parquet");
+                planks_tc_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.7.desc", 7, "planks-" + n + "/blinds");
+                planks_tc_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.12.desc", 12, "planks-" + n + "/crateex");
                 planks_tc_slabs[i].carverHelper
                     .addVariation("tile." + n + ".planks.14.desc", 14, "planks-" + n + "/chaotic-hor");
-                planks_tc_slabs[i].carverHelper.addVariation("tile." + n + ".planks.15.desc", 15, "planks-" + n + "/chaotic");
+                planks_tc_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.15.desc", 15, "planks-" + n + "/chaotic");
 
                 planks_tc_double_slabs[i] = (BlockCarvableDoubleSlab) new BlockCarvableDoubleSlab(
                     Material.wood,
                     planks_tc_slabs[i]).setHardness(2.0F)
-                    .setResistance(10.0F)
-                    .setCreativeTab(null);
+                        .setResistance(10.0F)
+                        .setCreativeTab(null);
                 planks_tc_double_slabs[i].setHarvestLevel("axe", 0);
                 planks_tc_double_slabs[i].setStepSound(Block.soundTypeWood);
-                planks_tc_double_slabs[i].carverHelper.addVariation("tile." + n + ".planks.1.desc", 1, "planks-" + n + "/clean");
-                planks_tc_double_slabs[i].carverHelper.addVariation("tile." + n + ".planks.2.desc", 2, "planks-" + n + "/short");
-                planks_tc_double_slabs[i].carverHelper.addVariation("tile." + n + ".planks.6.desc", 6, "planks-" + n + "/fancy");
-                planks_tc_double_slabs[i].carverHelper.addVariation("tile." + n + ".planks.8.desc", 8, "planks-" + n + "/panel-nails");
-                planks_tc_double_slabs[i].carverHelper.addVariation("tile." + n + ".planks.9.desc", 9, "planks-" + n + "/double");
-                planks_tc_double_slabs[i].carverHelper.addVariation("tile." + n + ".planks.10.desc", 10, "planks-" + n + "/crate");
+                planks_tc_double_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.1.desc", 1, "planks-" + n + "/clean");
+                planks_tc_double_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.2.desc", 2, "planks-" + n + "/short");
+                planks_tc_double_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.6.desc", 6, "planks-" + n + "/fancy");
+                planks_tc_double_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.8.desc", 8, "planks-" + n + "/panel-nails");
+                planks_tc_double_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.9.desc", 9, "planks-" + n + "/double");
+                planks_tc_double_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.10.desc", 10, "planks-" + n + "/crate");
                 planks_tc_double_slabs[i].carverHelper
                     .addVariation("tile." + n + ".planks.11.desc", 11, "planks-" + n + "/crate-fancy");
-                planks_tc_double_slabs[i].carverHelper.addVariation("tile." + n + ".planks.13.desc", 13, "planks-" + n + "/large");
-                planks_tc_double_slabs[i].carverHelper.addVariation("tile." + n + ".planks.3.desc", 3, "planks-" + n + "/vertical");
+                planks_tc_double_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.13.desc", 13, "planks-" + n + "/large");
+                planks_tc_double_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.3.desc", 3, "planks-" + n + "/vertical");
                 planks_tc_double_slabs[i].carverHelper
                     .addVariation("tile." + n + ".planks.4.desc", 4, "planks-" + n + "/vertical-uneven");
-                planks_tc_double_slabs[i].carverHelper.addVariation("tile." + n + ".planks.5.desc", 5, "planks-" + n + "/parquet");
-                planks_tc_double_slabs[i].carverHelper.addVariation("tile." + n + ".planks.7.desc", 7, "planks-" + n + "/blinds");
-                planks_tc_double_slabs[i].carverHelper.addVariation("tile." + n + ".planks.12.desc", 12, "planks-" + n + "/crateex");
+                planks_tc_double_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.5.desc", 5, "planks-" + n + "/parquet");
+                planks_tc_double_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.7.desc", 7, "planks-" + n + "/blinds");
+                planks_tc_double_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.12.desc", 12, "planks-" + n + "/crateex");
                 planks_tc_double_slabs[i].carverHelper
                     .addVariation("tile." + n + ".planks.14.desc", 14, "planks-" + n + "/chaotic-hor");
-                planks_tc_double_slabs[i].carverHelper.addVariation("tile." + n + ".planks.15.desc", 15, "planks-" + n + "/chaotic");
+                planks_tc_double_slabs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.15.desc", 15, "planks-" + n + "/chaotic");
                 planks_tc_double_slabs[i].carverHelper.registerBlock(planks_tc_double_slabs[i], name + "_double_slab");
                 planks_tc_double_slabs[i].setBlockName("chisel." + name + "_slab");
 
@@ -4841,24 +4939,36 @@ public enum Features {
                 Carving.chisel.setVariationSound(name + "_slab", Chisel.MOD_ID + ":chisel.wood");
 
                 planks_tc_stairs[i] = new CarvableStairsMaker(planks_tc[i]);
-                planks_tc_stairs[i].carverHelper.addVariation("tile." + n + ".planks.1.desc", 1, "planks-" + n + "/clean");
-                planks_tc_stairs[i].carverHelper.addVariation("tile." + n + ".planks.2.desc", 2, "planks-" + n + "/short");
-                planks_tc_stairs[i].carverHelper.addVariation("tile." + n + ".planks.6.desc", 6, "planks-" + n + "/fancy");
-                planks_tc_stairs[i].carverHelper.addVariation("tile." + n + ".planks.8.desc", 8, "planks-" + n + "/panel-nails");
-                planks_tc_stairs[i].carverHelper.addVariation("tile." + n + ".planks.9.desc", 9, "planks-" + n + "/double");
-                planks_tc_stairs[i].carverHelper.addVariation("tile." + n + ".planks.10.desc", 10, "planks-" + n + "/crate");
+                planks_tc_stairs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.1.desc", 1, "planks-" + n + "/clean");
+                planks_tc_stairs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.2.desc", 2, "planks-" + n + "/short");
+                planks_tc_stairs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.6.desc", 6, "planks-" + n + "/fancy");
+                planks_tc_stairs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.8.desc", 8, "planks-" + n + "/panel-nails");
+                planks_tc_stairs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.9.desc", 9, "planks-" + n + "/double");
+                planks_tc_stairs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.10.desc", 10, "planks-" + n + "/crate");
                 planks_tc_stairs[i].carverHelper
                     .addVariation("tile." + n + ".planks.11.desc", 11, "planks-" + n + "/crate-fancy");
-                planks_tc_stairs[i].carverHelper.addVariation("tile." + n + ".planks.13.desc", 13, "planks-" + n + "/large");
-                planks_tc_stairs[i].carverHelper.addVariation("tile." + n + ".planks.3.desc", 3, "planks-" + n + "/vertical");
+                planks_tc_stairs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.13.desc", 13, "planks-" + n + "/large");
+                planks_tc_stairs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.3.desc", 3, "planks-" + n + "/vertical");
                 planks_tc_stairs[i].carverHelper
                     .addVariation("tile." + n + ".planks.4.desc", 4, "planks-" + n + "/vertical-uneven");
-                planks_tc_stairs[i].carverHelper.addVariation("tile." + n + ".planks.5.desc", 5, "planks-" + n + "/parquet");
-                planks_tc_stairs[i].carverHelper.addVariation("tile." + n + ".planks.7.desc", 7, "planks-" + n + "/blinds");
-                planks_tc_stairs[i].carverHelper.addVariation("tile." + n + ".planks.12.desc", 12, "planks-" + n + "/crateex");
+                planks_tc_stairs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.5.desc", 5, "planks-" + n + "/parquet");
+                planks_tc_stairs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.7.desc", 7, "planks-" + n + "/blinds");
+                planks_tc_stairs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.12.desc", 12, "planks-" + n + "/crateex");
                 planks_tc_stairs[i].carverHelper
                     .addVariation("tile." + n + ".planks.14.desc", 14, "planks-" + n + "/chaotic-hor");
-                planks_tc_stairs[i].carverHelper.addVariation("tile." + n + ".planks.15.desc", 15, "planks-" + n + "/chaotic");
+                planks_tc_stairs[i].carverHelper
+                    .addVariation("tile." + n + ".planks.15.desc", 15, "planks-" + n + "/chaotic");
 
                 planks_tc_stairs[i].create(name + "_stairs", ChiselBlocks.planksTCStairs, true);
             }
@@ -5096,7 +5206,7 @@ public enum Features {
     private static void registerSlabTop(Block bottom, Block top, boolean isWood) {
         String name = Block.blockRegistry.getNameForObject(bottom);
         name = name.substring(name.indexOf(':') + 1) + "_top";
-        if(isWood) {
+        if (isWood) {
             top.setStepSound(Block.soundTypeWood);
             top.setHarvestLevel("axe", 0);
         }
