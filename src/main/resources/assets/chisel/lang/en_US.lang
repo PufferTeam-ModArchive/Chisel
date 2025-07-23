@@ -1066,6 +1066,17 @@ tile.chisel.silverwood_planks.name=Silverwood Planks
 tile.chisel.silverwood_planks_slab.name=Silverwood Slab
 tile.chisel.silverwood_planks_stairs.name=Silverwood Stairs
 
+#Witchery Wood
+tile.chisel.rowan_planks.name=Rowan Planks
+tile.chisel.rowan_planks_slab.name=Rowan Slab
+tile.chisel.rowan_planks_stairs.name=Rowan Stairs
+tile.chisel.alder_planks.name=Alder Planks
+tile.chisel.alder_planks_slab.name=Alder Slab
+tile.chisel.alder_planks_stairs.name=Alder Stairs
+tile.chisel.hawthorn_planks.name=Hawthorn Planks
+tile.chisel.hawthorn_planks_slab.name=Hawthorn Slab
+tile.chisel.hawthorn_planks_stairs.name=Hawthorn Stairs
+
 #Iron Fence
 tile.chisel.iron_bars.name=Iron Bars
 tile.iron_bars.1.desc=Iron Bars without Frame
@@ -1768,6 +1779,57 @@ tile.silverwood.planks.7.desc=Silverwood Wood Plank Blinds
 tile.silverwood.planks.12.desc=Silverwood Wood Scaffold
 tile.silverwood.planks.14.desc=Silverwood Wood Planks in Disarray
 tile.silverwood.planks.15.desc=Vertical Silverwood Wood Planks in Disarray
+
+#Rowan
+tile.rowan.planks.1.desc=Smooth Rowan Wood Planks
+tile.rowan.planks.2.desc=Short Rowan Wood Planks
+tile.rowan.planks.6.desc=Fancy Rowan Wood Plank Arrangement
+tile.rowan.planks.8.desc=Rowan Wood Panel
+tile.rowan.planks.9.desc=Rowan Wood Double Slab
+tile.rowan.planks.10.desc=Rowan Wood Crate
+tile.rowan.planks.11.desc=Fancy Rowan Wood Crate
+tile.rowan.planks.13.desc=Large Long Rowan Wood Planks
+tile.rowan.planks.3.desc=Vertical Rowan Wood Planks
+tile.rowan.planks.4.desc=Vertical Uneven Rowan Wood Planks
+tile.rowan.planks.5.desc=Rowan Wood Parquet
+tile.rowan.planks.7.desc=Rowan Wood Plank Blinds
+tile.rowan.planks.12.desc=Rowan Wood Scaffold
+tile.rowan.planks.14.desc=Rowan Wood Planks in Disarray
+tile.rowan.planks.15.desc=Vertical Rowan Wood Planks in Disarray
+
+#Alder
+tile.alder.planks.1.desc=Smooth Alder Wood Planks
+tile.alder.planks.2.desc=Short Alder Wood Planks
+tile.alder.planks.6.desc=Fancy Alder Wood Plank Arrangement
+tile.alder.planks.8.desc=Alder Wood Panel
+tile.alder.planks.9.desc=Alder Wood Double Slab
+tile.alder.planks.10.desc=Alder Wood Crate
+tile.alder.planks.11.desc=Fancy Alder Wood Crate
+tile.alder.planks.13.desc=Large Long Alder Wood Planks
+tile.alder.planks.3.desc=Vertical Alder Wood Planks
+tile.alder.planks.4.desc=Vertical Uneven Alder Wood Planks
+tile.alder.planks.5.desc=Alder Wood Parquet
+tile.alder.planks.7.desc=Alder Wood Plank Blinds
+tile.alder.planks.12.desc=Alder Wood Scaffold
+tile.alder.planks.14.desc=Alder Wood Planks in Disarray
+tile.alder.planks.15.desc=Vertical Alder Wood Planks in Disarray
+
+#Hawthorn
+tile.hawthorn.planks.1.desc=Smooth Hawthorn Wood Planks
+tile.hawthorn.planks.2.desc=Short Hawthorn Wood Planks
+tile.hawthorn.planks.6.desc=Fancy Hawthorn Wood Plank Arrangement
+tile.hawthorn.planks.8.desc=Hawthorn Wood Panel
+tile.hawthorn.planks.9.desc=Hawthorn Wood Double Slab
+tile.hawthorn.planks.10.desc=Hawthorn Wood Crate
+tile.hawthorn.planks.11.desc=Fancy Hawthorn Wood Crate
+tile.hawthorn.planks.13.desc=Large Long Hawthorn Wood Planks
+tile.hawthorn.planks.3.desc=Vertical Hawthorn Wood Planks
+tile.hawthorn.planks.4.desc=Vertical Uneven Hawthorn Wood Planks
+tile.hawthorn.planks.5.desc=Hawthorn Wood Parquet
+tile.hawthorn.planks.7.desc=Hawthorn Wood Plank Blinds
+tile.hawthorn.planks.12.desc=Hawthorn Wood Scaffold
+tile.hawthorn.planks.14.desc=Hawthorn Wood Planks in Disarray
+tile.hawthorn.planks.15.desc=Vertical Hawthorn Wood Planks in Disarray
 
 #Stained Glass
 white.bubble.desc=White Bubble Glass

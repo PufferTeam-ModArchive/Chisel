@@ -117,11 +117,13 @@ public final class ChiselBlocks {
     public static CarvableStairsMaker[] planks_stairs = new CarvableStairsMaker[6];
     public static CarvableStairsMaker[] planks_bop_stairs = new CarvableStairsMaker[14];
     public static CarvableStairsMaker[] planks_tc_stairs = new CarvableStairsMaker[2];
+    public static CarvableStairsMaker[] planks_wi_stairs = new CarvableStairsMaker[3];
 
     // Arrays can't be final because of how @ObjectHolder works
     public static BlockCarvableStairs[] planksStairs = new BlockCarvableStairs[8];
     public static BlockCarvableStairs[] planksBOPStairs = new BlockCarvableStairs[8];
     public static BlockCarvableStairs[] planksTCStairs = new BlockCarvableStairs[8];
+    public static BlockCarvableStairs[] planksWIStairs = new BlockCarvableStairs[8];
 
     public static BlockCarvableStairs[] cobblestoneStairs = new BlockCarvableStairs[8];
     public static BlockCarvableStairs[] andesiteStairs = new BlockCarvableStairs[8];
@@ -145,6 +147,10 @@ public final class ChiselBlocks {
     public static BlockCarvable[] planks_tc = new BlockCarvable[2];
     public static BlockCarvableSlab[] planks_tc_slabs = new BlockCarvableSlab[2];
     public static BlockCarvableDoubleSlab[] planks_tc_double_slabs = new BlockCarvableDoubleSlab[2];
+
+    public static BlockCarvable[] planks_wi = new BlockCarvable[3];
+    public static BlockCarvableSlab[] planks_wi_slabs = new BlockCarvableSlab[3];
+    public static BlockCarvableDoubleSlab[] planks_wi_double_slabs = new BlockCarvableDoubleSlab[3];
 
     public static BlockCarvablePumpkin[] pumpkin = new BlockCarvablePumpkin[16];
     public static BlockCarvablePumpkin[] jackolantern = new BlockCarvablePumpkin[16];
